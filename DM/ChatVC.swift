@@ -68,9 +68,54 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         self.locationManager.delegate = self
     }
     
+
+    
+    
     var selectedid = String()
     
     //Downloads messages
+    @objc func fetchData2(_ notification: Notification) {
+
+        if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
+            
+            selectedid = selecteduserid
+            
+        } else {
+            
+            selectedid = "rmmMbNlS5ZPoE2OPTOetUVYBWqf2"
+        }
+        
+        Message.downloadAllMessages(forUserID: selectedid, completion: {[weak weakSelf = self] (message) in
+            
+            
+            
+            weakSelf?.items.append(message)
+            weakSelf?.items.sort{ $0.timestamp < $1.timestamp }
+            DispatchQueue.main.async {
+                if let state = weakSelf?.items.isEmpty, state == false {
+                    weakSelf?.tableView.reloadData()
+                    weakSelf?.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: false)
+                    
+                    
+                } else {
+                    
+                    
+                    
+                }
+            }
+        })
+        
+        
+        if items.count == 0 {
+            
+            
+            
+        }
+        
+        
+        Message.markMessagesRead(forUserID: selectedid)
+    }
+    
     func fetchData() {
         
         if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
@@ -83,18 +128,35 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         }
         
         Message.downloadAllMessages(forUserID: selectedid, completion: {[weak weakSelf = self] (message) in
+            
+            
+            
             weakSelf?.items.append(message)
             weakSelf?.items.sort{ $0.timestamp < $1.timestamp }
             DispatchQueue.main.async {
                 if let state = weakSelf?.items.isEmpty, state == false {
                     weakSelf?.tableView.reloadData()
                     weakSelf?.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: false)
+                    
+                    
+                } else {
+                    
+                    
+                    
                 }
             }
         })
+        
+        
+        if items.count == 0 {
+            
+            
+            
+        }
+        
+        
         Message.markMessagesRead(forUserID: selectedid)
     }
-    
     //Hides current viewcontroller
     @objc func dismissSelf() {
         if let navController = self.navigationController {
@@ -204,6 +266,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             self.tableView.scrollIndicatorInsets.bottom = height
             if self.items.count > 0 {
                 self.tableView.scrollToRow(at: IndexPath.init(row: self.items.count - 1, section: 0), at: .bottom, animated: true)
+            } else {
+                
+                
             }
         }
     }
@@ -362,6 +427,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         
         self.customization()
         self.fetchData()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(self.fetchData2(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
+
     }
 }
 

@@ -28,7 +28,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //
             
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Login") as UIViewController
+            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Register") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewControlleripad
             self.window?.makeKeyAndVisible()

@@ -76,6 +76,9 @@ class Message {
                             }
                         }
                     })
+                } else {
+                    
+                    
                 }
             })
         }
@@ -150,7 +153,11 @@ class Message {
         }
     }
     
+    var intro = Bool()
+    
     class func send(message: Message, toID: String, completion: @escaping (Bool) -> Swift.Void)  {
+        
+        
         if let currentUserID = Auth.auth().currentUser?.uid {
             switch message.type {
             case .location:
@@ -180,6 +187,8 @@ class Message {
             }
         }
     }
+    
+
     
     class func uploadMessage(withValues: [String: Any], toID: String, completion: @escaping (Bool) -> Swift.Void) {
         if let currentUserID = Auth.auth().currentUser?.uid {
