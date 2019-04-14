@@ -8,6 +8,8 @@
 
 import UIKit
 
+var selectedbutton = Int()
+
 class AccountOverviewViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -27,7 +29,7 @@ class AccountOverviewViewController: UIViewController, UITableViewDataSource, UI
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.layer.cornerRadius = 5.0
         // Do any additional setup after loading the view.
     }
     

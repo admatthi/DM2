@@ -10,6 +10,14 @@ import UIKit
 
 class AccountTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var tapb1: UIButton!
+    @IBOutlet weak var tapb2: UIButton!
+    @IBOutlet weak var tapb3: UIButton!
+    @IBOutlet weak var tapb4: UIButton!
+    @IBOutlet weak var tapb5: UIButton!
+    @IBOutlet weak var tapb6: UIButton!
+    @IBOutlet weak var tapb7: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

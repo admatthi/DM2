@@ -52,7 +52,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     var currentUser: User?
     var canSendLocation = true
     
-
+    
     //MARK: Methods
     func customization() {
         self.imagePicker.delegate = self
@@ -68,18 +68,14 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         self.locationManager.delegate = self
     }
     
-
     
-    @IBAction func tapBack(_ sender: Any) {
-        
-        self.dismiss(animated: true, completion: nil)
-    }
+    
     
     var selectedid = String()
     
     //Downloads messages
     @objc func fetchData2(_ notification: Notification) {
-
+        
         if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
             
             selectedid = selecteduserid
@@ -183,9 +179,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         let message = Message.init(type: type, content: content, owner: .sender, timestamp: Int(Date().timeIntervalSince1970), isRead: false)
         Message.send(message: message, toID: selectedid, completion: {(_) in
         })
-
         
-   
+        
+        
     }
     
     func checkLocationPermission() -> Bool {
@@ -216,7 +212,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     }
     
     @IBAction func showMessage(_ sender: Any) {
-       self.animateExtraButtons(toHide: true)
+        self.animateExtraButtons(toHide: true)
     }
     
     @IBAction func selectGallery(_ sender: Any) {
@@ -276,7 +272,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             }
         }
     }
-
+    
     //MARK: Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
@@ -398,7 +394,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             }
         }
     }
-
+    
     //MARK: ViewController lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -410,16 +406,16 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         NotificationCenter.default.removeObserver(self)
-        Message.markMessagesRead(forUserID: self.currentUser!.id)
+        Message.markMessagesRead(forUserID: uid)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         ref = Database.database().reference()
-
         
         tableView.layer.cornerRadius = 5.0
+        
         if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
             
             selectedid = selecteduserid
@@ -433,9 +429,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         self.fetchData()
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.fetchData2(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
-
+        
     }
 }
-
-
-
