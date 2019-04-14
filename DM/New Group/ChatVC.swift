@@ -70,6 +70,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     
 
     
+    @IBAction func tapBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     
     var selectedid = String()
     
@@ -415,7 +419,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         ref = Database.database().reference()
 
         
-        
+        tableView.layer.cornerRadius = 5.0
         if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
             
             selectedid = selecteduserid

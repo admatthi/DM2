@@ -32,6 +32,9 @@
 		9D40C7DD2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */; };
 		9D40C7DE2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */; };
 		9D40C7DF2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */; };
+		9D40C7E12262EEAB0064BBC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7E02262EEAB0064BBC4 /* SettingsViewController.swift */; };
+		9D40C7E22262EEAB0064BBC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7E02262EEAB0064BBC4 /* SettingsViewController.swift */; };
+		9D40C7E32262EEAB0064BBC4 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7E02262EEAB0064BBC4 /* SettingsViewController.swift */; };
 		9D6580AD226158FF003F9A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6580AC226158FF003F9A08 /* AppDelegate.swift */; };
 		9D6580AF226158FF003F9A08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6580AE226158FF003F9A08 /* ViewController.swift */; };
 		9D6580B422615904003F9A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D6580B322615904003F9A08 /* Assets.xcassets */; };
@@ -124,6 +127,7 @@
 		9D40C7D32262E3430064BBC4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewCell.swift; sourceTree = "<group>"; };
 		9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D40C7E02262EEAB0064BBC4 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9D6580A9226158FF003F9A08 /* DM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6580AC226158FF003F9A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D6580AE226158FF003F9A08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,7 +151,7 @@
 		9D658103226159ED003F9A08 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		9D658104226159ED003F9A08 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9D65810E226159F5003F9A08 /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
-		9D65810F226159F6003F9A08 /* ConversationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsVC.swift; sourceTree = "<group>"; };
+		9D65810F226159F6003F9A08 /* ConversationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationsVC.swift; path = ../ConversationsVC.swift; sourceTree = "<group>"; };
 		9D658110226159F6003F9A08 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		9D658111226159F6003F9A08 /* LandingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		9D658112226159F7003F9A08 /* VCCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCCells.swift; sourceTree = "<group>"; };
@@ -203,6 +207,9 @@
 				9D40C7D32262E3430064BBC4 /* SearchViewController.swift */,
 				9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */,
 				9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */,
+				9D40C7E02262EEAB0064BBC4 /* SettingsViewController.swift */,
+				9D658110226159F6003F9A08 /* ChatVC.swift */,
+				9D65810F226159F6003F9A08 /* ConversationsVC.swift */,
 			);
 			path = "New Group";
 			sourceTree = "<group>";
@@ -236,8 +243,6 @@
 				9D6580AE226158FF003F9A08 /* ViewController.swift */,
 				9D65812622615A04003F9A08 /* Main.storyboard */,
 				9D40C7D72262E3510064BBC4 /* New Group */,
-				9D658110226159F6003F9A08 /* ChatVC.swift */,
-				9D65810F226159F6003F9A08 /* ConversationsVC.swift */,
 				9D658111226159F6003F9A08 /* LandingVC.swift */,
 				9D65810E226159F5003F9A08 /* NavVC.swift */,
 				9D658112226159F7003F9A08 /* VCCells.swift */,
@@ -553,6 +558,7 @@
 				9D658105226159EE003F9A08 /* User.swift in Sources */,
 				9D6580F8226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
 				9D40C7D92262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
+				9D40C7E12262EEAB0064BBC4 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +568,7 @@
 			files = (
 				9D658115226159F7003F9A08 /* NavVC.swift in Sources */,
 				9D65811E226159F7003F9A08 /* LandingVC.swift in Sources */,
+				9D40C7E22262EEAB0064BBC4 /* SettingsViewController.swift in Sources */,
 				9D658100226159E4003F9A08 /* Helper Files.swift in Sources */,
 				9D6580F0226159D7003F9A08 /* AccountTableViewCell.swift in Sources */,
 				9D658121226159F7003F9A08 /* VCCells.swift in Sources */,
@@ -589,6 +596,7 @@
 			files = (
 				9D658116226159F7003F9A08 /* NavVC.swift in Sources */,
 				9D65811F226159F7003F9A08 /* LandingVC.swift in Sources */,
+				9D40C7E32262EEAB0064BBC4 /* SettingsViewController.swift in Sources */,
 				9D658101226159E4003F9A08 /* Helper Files.swift in Sources */,
 				9D6580F1226159D7003F9A08 /* AccountTableViewCell.swift in Sources */,
 				9D658122226159F7003F9A08 /* VCCells.swift in Sources */,

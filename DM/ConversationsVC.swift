@@ -43,7 +43,9 @@ class ConversationsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         self.navigationController?.interactivePopGestureRecognizer?.delegate = nil
         //NavigationBar customization
         let navigationTitleFont = UIFont(name: "AvenirNext-Regular", size: 18)!
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont, NSAttributedString.Key.foregroundColor: UIColor.white]
+       
+        tableView.layer.cornerRadius = 5.0
+    self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: navigationTitleFont, NSAttributedString.Key.foregroundColor: UIColor.white]
         // notification setup
         NotificationCenter.default.addObserver(self, selector: #selector(self.pushToUserMesssages(notification:)), name: NSNotification.Name(rawValue: "showUserMessages"), object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(self.showEmailAlert), name: UIApplication.didBecomeActiveNotification, object: nil)
