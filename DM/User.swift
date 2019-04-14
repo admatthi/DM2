@@ -90,11 +90,11 @@ class User: NSObject {
             if let data = snapshot.value as? [String: String] {
                 
                 
-                let name = data["name"]!
-                let email = data["email"]!
-                
-                print(name)
-                print(email)
+//                let name = data["name"]!
+//                let email = data["email"]!
+//
+//                print(name)
+//                print(email)
             }
         })
     }

@@ -28,33 +28,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             //
             
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Register") as UIViewController
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = initialViewControlleripad
-            self.window?.makeKeyAndVisible()
+            let tabBarBuyer : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "HomeTab") as! UITabBarController
             
+            tabBarBuyer.selectedIndex = 0
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = tabBarBuyer
+            
+            self.window?.makeKeyAndVisible()
         } else {
             
             uid = (Auth.auth().currentUser?.uid)!
             
-            if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
-
-                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Conversations") as UIViewController
-                self.window = UIWindow(frame: UIScreen.main.bounds)
-                self.window?.rootViewController = initialViewControlleripad
-                self.window?.makeKeyAndVisible()
-                
-            } else {
-                
-                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Chat") as UIViewController
-                self.window = UIWindow(frame: UIScreen.main.bounds)
-                self.window?.rootViewController = initialViewControlleripad
-                self.window?.makeKeyAndVisible()
-
-                
-            }
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let tabBarBuyer : UITabBarController = mainStoryboardIpad.instantiateViewController(withIdentifier: "HomeTab") as! UITabBarController
+            
+            tabBarBuyer.selectedIndex = 1
+            
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = tabBarBuyer
+            
+            self.window?.makeKeyAndVisible()
         }
         
         return true

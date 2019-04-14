@@ -14,6 +14,24 @@
 		9D1531542261632C001A6DCB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9D1531512261632C001A6DCB /* GoogleService-Info.plist */; };
 		9D40C7C422619BDE0064BBC4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7C322619BDE0064BBC4 /* RegisterViewController.swift */; };
 		9D40C7C622619BE90064BBC4 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7C522619BE80064BBC4 /* SignInViewController.swift */; };
+		9D40C7CA2262E2060064BBC4 /* BasisGrotesquePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C72262E2040064BBC4 /* BasisGrotesquePro-Regular.ttf */; };
+		9D40C7CB2262E2060064BBC4 /* BasisGrotesquePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C72262E2040064BBC4 /* BasisGrotesquePro-Regular.ttf */; };
+		9D40C7CC2262E2060064BBC4 /* BasisGrotesquePro-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C72262E2040064BBC4 /* BasisGrotesquePro-Regular.ttf */; };
+		9D40C7CD2262E2060064BBC4 /* BasisGrotesquePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C82262E2050064BBC4 /* BasisGrotesquePro-Bold.ttf */; };
+		9D40C7CE2262E2060064BBC4 /* BasisGrotesquePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C82262E2050064BBC4 /* BasisGrotesquePro-Bold.ttf */; };
+		9D40C7CF2262E2060064BBC4 /* BasisGrotesquePro-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C82262E2050064BBC4 /* BasisGrotesquePro-Bold.ttf */; };
+		9D40C7D02262E2060064BBC4 /* BasisGrotesquePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C92262E2050064BBC4 /* BasisGrotesquePro-Light.ttf */; };
+		9D40C7D12262E2060064BBC4 /* BasisGrotesquePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C92262E2050064BBC4 /* BasisGrotesquePro-Light.ttf */; };
+		9D40C7D22262E2060064BBC4 /* BasisGrotesquePro-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9D40C7C92262E2050064BBC4 /* BasisGrotesquePro-Light.ttf */; };
+		9D40C7D42262E3430064BBC4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7D32262E3430064BBC4 /* SearchViewController.swift */; };
+		9D40C7D52262E3430064BBC4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7D32262E3430064BBC4 /* SearchViewController.swift */; };
+		9D40C7D62262E3430064BBC4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7D32262E3430064BBC4 /* SearchViewController.swift */; };
+		9D40C7D92262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */; };
+		9D40C7DA2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */; };
+		9D40C7DB2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */; };
+		9D40C7DD2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */; };
+		9D40C7DE2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */; };
+		9D40C7DF2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */; };
 		9D6580AD226158FF003F9A08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6580AC226158FF003F9A08 /* AppDelegate.swift */; };
 		9D6580AF226158FF003F9A08 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D6580AE226158FF003F9A08 /* ViewController.swift */; };
 		9D6580B422615904003F9A08 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D6580B322615904003F9A08 /* Assets.xcassets */; };
@@ -100,6 +118,12 @@
 		9D1531512261632C001A6DCB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9D40C7C322619BDE0064BBC4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9D40C7C522619BE80064BBC4 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		9D40C7C72262E2040064BBC4 /* BasisGrotesquePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Regular.ttf"; sourceTree = "<group>"; };
+		9D40C7C82262E2050064BBC4 /* BasisGrotesquePro-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Bold.ttf"; sourceTree = "<group>"; };
+		9D40C7C92262E2050064BBC4 /* BasisGrotesquePro-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Light.ttf"; sourceTree = "<group>"; };
+		9D40C7D32262E3430064BBC4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
+		9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleCollectionViewCell.swift; sourceTree = "<group>"; };
+		9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9D6580A9226158FF003F9A08 /* DM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D6580AC226158FF003F9A08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9D6580AE226158FF003F9A08 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -173,6 +197,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		9D40C7D72262E3510064BBC4 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				9D40C7D32262E3430064BBC4 /* SearchViewController.swift */,
+				9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */,
+				9D40C7DC2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		9D6580A0226158FF003F9A08 = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +235,7 @@
 				9D6580AC226158FF003F9A08 /* AppDelegate.swift */,
 				9D6580AE226158FF003F9A08 /* ViewController.swift */,
 				9D65812622615A04003F9A08 /* Main.storyboard */,
+				9D40C7D72262E3510064BBC4 /* New Group */,
 				9D658110226159F6003F9A08 /* ChatVC.swift */,
 				9D65810F226159F6003F9A08 /* ConversationsVC.swift */,
 				9D658111226159F6003F9A08 /* LandingVC.swift */,
@@ -223,6 +258,9 @@
 				9D6580B522615904003F9A08 /* LaunchScreen.storyboard */,
 				9D6580B822615904003F9A08 /* Info.plist */,
 				9D1531512261632C001A6DCB /* GoogleService-Info.plist */,
+				9D40C7C82262E2050064BBC4 /* BasisGrotesquePro-Bold.ttf */,
+				9D40C7C92262E2050064BBC4 /* BasisGrotesquePro-Light.ttf */,
+				9D40C7C72262E2040064BBC4 /* BasisGrotesquePro-Regular.ttf */,
 			);
 			path = DM;
 			sourceTree = "<group>";
@@ -366,7 +404,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D40C7CA2262E2060064BBC4 /* BasisGrotesquePro-Regular.ttf in Resources */,
+				9D40C7D02262E2060064BBC4 /* BasisGrotesquePro-Light.ttf in Resources */,
 				9D6580B722615904003F9A08 /* LaunchScreen.storyboard in Resources */,
+				9D40C7CD2262E2060064BBC4 /* BasisGrotesquePro-Bold.ttf in Resources */,
 				9D6580B422615904003F9A08 /* Assets.xcassets in Resources */,
 				9D65812722615A05003F9A08 /* Main.storyboard in Resources */,
 				9D1531522261632C001A6DCB /* GoogleService-Info.plist in Resources */,
@@ -377,8 +418,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D40C7D12262E2060064BBC4 /* BasisGrotesquePro-Light.ttf in Resources */,
 				9D65812822615A05003F9A08 /* Main.storyboard in Resources */,
 				9D1531532261632C001A6DCB /* GoogleService-Info.plist in Resources */,
+				9D40C7CE2262E2060064BBC4 /* BasisGrotesquePro-Bold.ttf in Resources */,
+				9D40C7CB2262E2060064BBC4 /* BasisGrotesquePro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,8 +430,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D40C7D22262E2060064BBC4 /* BasisGrotesquePro-Light.ttf in Resources */,
 				9D65812922615A05003F9A08 /* Main.storyboard in Resources */,
 				9D1531542261632C001A6DCB /* GoogleService-Info.plist in Resources */,
+				9D40C7CF2262E2060064BBC4 /* BasisGrotesquePro-Bold.ttf in Resources */,
+				9D40C7CC2262E2060064BBC4 /* BasisGrotesquePro-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,6 +534,7 @@
 				9D65811D226159F7003F9A08 /* LandingVC.swift in Sources */,
 				9D6580AF226158FF003F9A08 /* ViewController.swift in Sources */,
 				9D658120226159F7003F9A08 /* VCCells.swift in Sources */,
+				9D40C7DD2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */,
 				9D6580FB226159D7003F9A08 /* AccountOverviewViewController.swift in Sources */,
 				9D40C7C422619BDE0064BBC4 /* RegisterViewController.swift in Sources */,
 				9D6580EF226159D7003F9A08 /* AccountTableViewCell.swift in Sources */,
@@ -498,11 +546,13 @@
 				9D6580EC226159D7003F9A08 /* CoachViewController.swift in Sources */,
 				9D65811A226159F7003F9A08 /* ChatVC.swift in Sources */,
 				9D6580F2226159D7003F9A08 /* HomeTabViewController.swift in Sources */,
+				9D40C7D42262E3430064BBC4 /* SearchViewController.swift in Sources */,
 				9D658114226159F7003F9A08 /* NavVC.swift in Sources */,
 				9D65810B226159EE003F9A08 /* Message.swift in Sources */,
 				9D658123226159F7003F9A08 /* WelcomeVC.swift in Sources */,
 				9D658105226159EE003F9A08 /* User.swift in Sources */,
 				9D6580F8226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
+				9D40C7D92262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,7 +571,10 @@
 				9D6580F6226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
 				9D658106226159EE003F9A08 /* User.swift in Sources */,
 				9D65811B226159F7003F9A08 /* ChatVC.swift in Sources */,
+				9D40C7DA2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
 				9D65810C226159EE003F9A08 /* Message.swift in Sources */,
+				9D40C7D52262E3430064BBC4 /* SearchViewController.swift in Sources */,
+				9D40C7DE2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */,
 				9D6580C222615905003F9A08 /* DMTests.swift in Sources */,
 				9D6580ED226159D7003F9A08 /* CoachViewController.swift in Sources */,
 				9D658124226159F7003F9A08 /* WelcomeVC.swift in Sources */,
@@ -545,7 +598,10 @@
 				9D6580F7226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
 				9D658107226159EE003F9A08 /* User.swift in Sources */,
 				9D65811C226159F7003F9A08 /* ChatVC.swift in Sources */,
+				9D40C7DB2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
 				9D65810D226159EE003F9A08 /* Message.swift in Sources */,
+				9D40C7D62262E3430064BBC4 /* SearchViewController.swift in Sources */,
+				9D40C7DF2262E3BD0064BBC4 /* CategoriesCollectionViewCell.swift in Sources */,
 				9D6580CD22615905003F9A08 /* DMUITests.swift in Sources */,
 				9D6580EE226159D7003F9A08 /* CoachViewController.swift in Sources */,
 				9D658125226159F7003F9A08 /* WelcomeVC.swift in Sources */,
@@ -701,7 +757,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC46100BE80406C9BBF2C08B /* Pods-DM.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-6";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
 				INFOPLIST_FILE = DM/Info.plist;
@@ -720,7 +776,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E5D3230B948057F23F88766 /* Pods-DM.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-4";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-6";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
 				INFOPLIST_FILE = DM/Info.plist;
