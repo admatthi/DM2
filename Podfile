@@ -10,6 +10,7 @@ pod 'Firebase/Auth'
 pod 'Firebase/Storage'
 pod 'Firebase/Core'
 pod 'FBSDKCoreKit'
+pod 'Purchases'
 
   # Pods for DM
 

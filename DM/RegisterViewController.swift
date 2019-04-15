@@ -61,26 +61,11 @@ class RegisterViewController: UIViewController, UITextFieldDelegate     {
                     //                    purchased = true
                     
                   
-                    
-                    if uid != "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
-                        
-                        let content = "Hi, welcome to Coach! I'm Alek, your consultation coach. I've been working in weight loss and fitness for over 10 years. I'll be explaining how Coach works and guiding you through our subscription options for working with a weight loss coach here. When you're ready to start being coached, I'll help you find a coach who is best suited to your specific health needs. Would you please share your name, age, and what health concerns you would like to work?"
-                        
-                        
-                        let values = ["type": "text", "content": content, "fromID": "rmmMbNlS5ZPoE2OPTOetUVYBWqf2", "toID": uid, "timestamp": Int(Date().timeIntervalSince1970), "isRead": false] as [String : Any]
-                        
-                        Database.database().reference().child("conversations").childByAutoId().childByAutoId().setValue(values, withCompletionBlock: { (error, reference) in
-                            let data = ["location": reference.parent!.key]
-                            Database.database().reference().child("users").child("rmmMbNlS5ZPoE2OPTOetUVYBWqf2").child("conversations").child(uid).updateChildValues(data)
-                            Database.database().reference().child("users").child(uid).child("conversations").child("rmmMbNlS5ZPoE2OPTOetUVYBWqf2").updateChildValues(data)
-                            
-                            NotificationCenter.default.post(name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
-                            
-                            self.performSegue(withIdentifier: "RegisterToChat", sender: self)
+              
+                            self.performSegue(withIdentifier: "RegisterToPurchase", sender: self)
 
-                        })
-                        
-                    }
+                }
+                    
                     
                     
 //                    let message = Message.init(type: type, content: content, owner: .sender, timestamp: Int(Date().timeIntervalSince1970), isRead: false)
@@ -90,8 +75,6 @@ class RegisterViewController: UIViewController, UITextFieldDelegate     {
                     
                 }
             }
-            
-        }
         
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

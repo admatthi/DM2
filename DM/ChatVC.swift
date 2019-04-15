@@ -85,6 +85,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
             selectedid = "rmmMbNlS5ZPoE2OPTOetUVYBWqf2"
         }
         
+        print(selectedid)
         Message.downloadAllMessages(forUserID: selectedid, completion: {[weak weakSelf = self] (message) in
             
             
@@ -395,6 +396,15 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         }
     }
     
+    @IBAction func tapJourney(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "ChatToAccount", sender: self)
+    }
+    
+    @IBAction func tapProfile(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "ChatToProfile", sender: self)
+    }
     //MARK: ViewController lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -405,6 +415,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        
+        
         NotificationCenter.default.removeObserver(self)
         Message.markMessagesRead(forUserID: uid)
     }
@@ -416,19 +428,52 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         
         tableView.layer.cornerRadius = 5.0
         
+        NotificationCenter.default.addObserver(self, selector: #selector(self.fetchData2(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
+
+        
+        if uid == ""  {
+
+            Auth.auth().signInAnonymously() { (authResult, error) in
+                
+                print(error?.localizedDescription)
+                uid = NSUUID().uuidString
+                
+                let content = "Hi, welcome to Help! I'm Alek, your consultation coach. I'll be explaining how Help works and guiding you through our subscription options for working with a weight loss coach here. When you're ready to start being coached, I'll help you find a coach who is best suited to your specific health needs. Would you please share your name, age, and what health concerns you would like to work on?"
+                
+                
+                let values = ["type": "text", "content": content, "fromID": "rmmMbNlS5ZPoE2OPTOetUVYBWqf2", "toID": uid, "timestamp": Int(Date().timeIntervalSince1970), "isRead": false] as [String : Any]
+                
+                Database.database().reference().child("conversations").childByAutoId().childByAutoId().setValue(values, withCompletionBlock: { (error, reference) in
+                    let data = ["location": reference.parent!.key]
+                    Database.database().reference().child("users").child("rmmMbNlS5ZPoE2OPTOetUVYBWqf2").child("conversations").child(uid).setValue(data)
+                    Database.database().reference().child("users").child(uid).child("conversations").child("rmmMbNlS5ZPoE2OPTOetUVYBWqf2").setValue(data)
+                    
+                    NotificationCenter.default.post(name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
+                    
+                })
+                self.customization()
+                
+            }
+            
+        } else {
+            
         if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
             
             selectedid = selecteduserid
+            self.customization()
+            self.fetchData()
             
         } else {
             
             selectedid = "rmmMbNlS5ZPoE2OPTOetUVYBWqf2"
+            self.customization()
+            self.fetchData()
+        }
+            
+        
         }
         
-        self.customization()
-        self.fetchData()
-        
-        NotificationCenter.default.addObserver(self, selector: #selector(self.fetchData2(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
+ 
         
     }
 }

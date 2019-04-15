@@ -18,6 +18,9 @@ class AccountTableViewCell: UITableViewCell {
     @IBOutlet weak var tapb6: UIButton!
     @IBOutlet weak var tapb7: UIButton!
     
+    @IBOutlet weak var tapbuynow: UIButton!
+    @IBOutlet weak var tapprivacy: UIButton!
+    @IBOutlet weak var taprate: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

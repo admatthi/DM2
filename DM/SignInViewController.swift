@@ -48,7 +48,7 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 dateFormatter.dateFormat = "MM-dd-yy"
                 var todaysdate =  dateFormatter.string(from: date)
                 
-            self.performSegue(withIdentifier: "SignInToHomeCoach", sender: self)
+            self.performSegue(withIdentifier: "SignInToChat", sender: self)
 
                 //
                 //                ref!.child("Users").child(uid).child("Purchased").child(selectedid).updateChildValues(["Title": "x"])
@@ -62,6 +62,10 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     }
     @IBOutlet weak var header: UILabel!
     
+    @IBAction func tapBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         self.view.endEditing(true)

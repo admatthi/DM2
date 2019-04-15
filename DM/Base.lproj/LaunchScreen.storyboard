@@ -25,7 +25,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitmap Copy" translatesAutoresizingMaskIntoConstraints="NO" id="XbE-df-sI4">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Bitmap-1" translatesAutoresizingMaskIntoConstraints="NO" id="XbE-df-sI4">
                                 <rect key="frame" x="87" y="384" width="240" height="128"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="J55-vc-j68"/>
@@ -51,6 +51,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Bitmap Copy" width="288" height="280"/>
+        <image name="Bitmap-1" width="288" height="280"/>
     </resources>
 </document>

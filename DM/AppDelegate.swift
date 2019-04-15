@@ -8,12 +8,22 @@
 
 import UIKit
 import Firebase
+import Purchases
+
+protocol SnippetsPurchasesDelegate: AnyObject {
+    
+    func purchaseCompleted(product: String)
+    
+}
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    var purchases: Purchases?
 
+    weak var purchasesdelegate : SnippetsPurchasesDelegate?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,14 +31,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         
+        Purchases.debugLogsEnabled = true
+        Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: "my_app_user_id")
         
         ref = Database.database().reference()
         
         if Auth.auth().currentUser == nil {
             //
             
+//            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Register") as UIViewController
+//            self.window = UIWindow(frame: UIScreen.main.bounds)
+//            self.window?.rootViewController = initialViewControlleripad
+//            self.window?.makeKeyAndVisible()
+            
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Register") as UIViewController
+            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Chat") as UIViewController
             self.window = UIWindow(frame: UIScreen.main.bounds)
             self.window?.rootViewController = initialViewControlleripad
             self.window?.makeKeyAndVisible()
@@ -82,5 +100,70 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
     
+    func letsgo() {
+        
+        
+        if Auth.auth().currentUser != nil {
+                        
+            ref?.child("Snippets").child("Users").child(uid).updateChildValues(["Purchased" : "Yes"])
+            
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            
+            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Chat") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewControlleripad
+            self.window?.makeKeyAndVisible()//
+            
+        }
+        
+    }
     
+    
+}
+
+extension AppDelegate: PurchasesDelegate {
+    func purchases(_ purchases: Purchases, completedTransaction transaction: SKPaymentTransaction, withUpdatedInfo purchaserInfo: PurchaserInfo) {
+        
+        self.purchasesdelegate?.purchaseCompleted(product: transaction.payment.productIdentifier)
+        
+       
+        
+        
+        letsgo()
+        
+    }
+    
+    func purchases(_ purchases: Purchases, receivedUpdatedPurchaserInfo purchaserInfo: PurchaserInfo) {
+        //        handlePurchaserInfo(purchaserInfo)
+        
+        print(purchaserInfo)
+        
+    }
+    
+    func purchases(_ purchases: Purchases, failedToUpdatePurchaserInfoWithError error: Error) {
+        print(error)
+        
+
+    }
+    
+    func purchases(_ purchases: Purchases, failedTransaction transaction: SKPaymentTransaction, withReason failureReason: Error) {
+        print(failureReason)
+        
+
+    }
+    
+    func purchases(_ purchases: Purchases, restoredTransactionsWith purchaserInfo: PurchaserInfo) {
+        //        handlePurchaserInfo(purchaserInfo)
+        
+   
+        letsgo()
+        
+        
+    }
+    
+    func purchases(_ purchases: Purchases, failedToRestoreTransactionsWithError error: Error) {
+        print(error)
+        
+    }
 }
