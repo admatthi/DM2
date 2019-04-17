@@ -48,7 +48,17 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 dateFormatter.dateFormat = "MM-dd-yy"
                 var todaysdate =  dateFormatter.string(from: date)
                 
-            self.performSegue(withIdentifier: "SignInToChat", sender: self)
+                if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
+                    
+                    self.performSegue(withIdentifier: "SignInToConversations", sender: self)
+
+                } else {
+                    
+                    self.performSegue(withIdentifier: "SignInToChat", sender: self)
+
+                }
+                
+                
 
                 //
                 //                ref!.child("Users").child(uid).child("Purchased").child(selectedid).updateChildValues(["Title": "x"])

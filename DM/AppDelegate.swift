@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import Purchases
+import FirebaseMessaging
+import UserNotifications
 
 protocol SnippetsPurchasesDelegate: AnyObject {
     
@@ -17,7 +19,7 @@ protocol SnippetsPurchasesDelegate: AnyObject {
 }
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
     var window: UIWindow?
     
@@ -25,14 +27,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     weak var purchasesdelegate : SnippetsPurchasesDelegate?
 
+    func applicationReceivedRemoteMessage(_ remoteMessage: MessagingRemoteMessage) {
+        print(remoteMessage.appData)
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+ 
+        if #available(iOS 10.0, *) {
+            // For iOS 10 display notification (sent via APNS)
+            UNUserNotificationCenter.current().delegate = self
+            
+            let authOptions: UNAuthorizationOptions = [.alert, .badge, .sound]
+            UNUserNotificationCenter.current().requestAuthorization(
+                options: authOptions,
+                completionHandler: {_, _ in })
+        } else {
+            let settings: UIUserNotificationSettings =
+                UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
+            application.registerUserNotificationSettings(settings)
+        }
+        
+        Messaging.messaging().delegate = self
+
+        application.registerForRemoteNotifications()
         
         FirebaseApp.configure()
         
         
         Purchases.debugLogsEnabled = true
-        Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: "my_app_user_id")
+        Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: nil)
         
         ref = Database.database().reference()
         
@@ -78,6 +103,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+        // If you are receiving a notification message while your app is in the background,
+        // this callback will not be fired till the user taps on the notification launching the application.
+        // TODO: Handle data of notification
+        
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+        
+        // Print message ID.
+        if let messageID = userInfo[gcmMessageIDKey] {
+            print("Message ID: \(messageID)")
+        }
+        
+        // Print full message.
+        print(userInfo)
+    }
+    
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -103,9 +146,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func letsgo() {
         
         
-        if Auth.auth().currentUser != nil {
-                        
-            ref?.child("Snippets").child("Users").child(uid).updateChildValues(["Purchased" : "Yes"])
+        
+            ref?.child("Users").child(uid).updateChildValues(["Purchased" : "Yes"])
             
             let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
             
@@ -120,7 +162,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     
-}
+
 
 extension AppDelegate: PurchasesDelegate {
     func purchases(_ purchases: Purchases, completedTransaction transaction: SKPaymentTransaction, withUpdatedInfo purchaserInfo: PurchaserInfo) {
@@ -129,7 +171,7 @@ extension AppDelegate: PurchasesDelegate {
         
        
         
-        
+        ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
         letsgo()
         
     }
@@ -155,8 +197,8 @@ extension AppDelegate: PurchasesDelegate {
     
     func purchases(_ purchases: Purchases, restoredTransactionsWith purchaserInfo: PurchaserInfo) {
         //        handlePurchaserInfo(purchaserInfo)
-        
-   
+        ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
+
         letsgo()
         
         

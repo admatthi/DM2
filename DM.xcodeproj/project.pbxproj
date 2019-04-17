@@ -163,6 +163,7 @@
 		9DA3BDAC2263E5E400C6BA7F /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewController.swift; sourceTree = "<group>"; };
 		9DA3BDB02263F2F100C6BA7F /* PurchaseIAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseIAPViewController.swift; sourceTree = "<group>"; };
 		9DA3BDB42263FB1B00C6BA7F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9DF35A382267D73800D4579F /* DM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DM.entitlements; sourceTree = "<group>"; };
 		9E5D3230B948057F23F88766 /* Pods-DM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DM.release.xcconfig"; path = "Pods/Target Support Files/Pods-DM/Pods-DM.release.xcconfig"; sourceTree = "<group>"; };
 		D567C2C47364E39CEAC6F74C /* Pods-DMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMUITests/Pods-DMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DCDA44E12445022B4A34D9F4 /* Pods_DMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -243,6 +244,7 @@
 		9D6580AB226158FF003F9A08 /* DM */ = {
 			isa = PBXGroup;
 			children = (
+				9DF35A382267D73800D4579F /* DM.entitlements */,
 				9D6580AC226158FF003F9A08 /* AppDelegate.swift */,
 				9D6580AE226158FF003F9A08 /* ViewController.swift */,
 				9D65812622615A04003F9A08 /* Main.storyboard */,
@@ -255,10 +257,10 @@
 				9D6580EB226159D6003F9A08 /* AccountOverviewViewController.swift */,
 				9DA3BDB02263F2F100C6BA7F /* PurchaseIAPViewController.swift */,
 				9D6580E7226159D6003F9A08 /* AccountTableViewCell.swift */,
+				9DA3BDA42263E11200C6BA7F /* ProfileViewController.swift */,
+				9D6580E9226159D6003F9A08 /* CoachTableViewCell.swift */,
 				9DA3BDAC2263E5E400C6BA7F /* StageViewController.swift */,
 				9D6580EA226159D6003F9A08 /* BuyNowViewController.swift */,
-				9D6580E9226159D6003F9A08 /* CoachTableViewCell.swift */,
-				9D6580E6226159D6003F9A08 /* CoachViewController.swift */,
 				9D6580E8226159D6003F9A08 /* HomeTabViewController.swift */,
 				9D6580FE226159E4003F9A08 /* Helper Files.swift */,
 				9D658103226159ED003F9A08 /* Conversation.swift */,
@@ -267,8 +269,8 @@
 				9D40C7C322619BDE0064BBC4 /* RegisterViewController.swift */,
 				9D40C7C522619BE80064BBC4 /* SignInViewController.swift */,
 				9D6580B322615904003F9A08 /* Assets.xcassets */,
-				9DA3BDA42263E11200C6BA7F /* ProfileViewController.swift */,
 				9DA3BDA82263E12E00C6BA7F /* ProfileTableViewCell.swift */,
+				9D6580E6226159D6003F9A08 /* CoachViewController.swift */,
 				9D6580B522615904003F9A08 /* LaunchScreen.storyboard */,
 				9D6580B822615904003F9A08 /* Info.plist */,
 				9D1531512261632C001A6DCB /* GoogleService-Info.plist */,
@@ -386,6 +388,9 @@
 							com.apple.InAppPurchase = {
 								enabled = 1;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					9D6580BC22615904003F9A08 = {
@@ -471,6 +476,7 @@
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Purchases/Purchases.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -481,6 +487,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Purchases.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -784,7 +791,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC46100BE80406C9BBF2C08B /* Pods-DM.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-8";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-9";
+				CODE_SIGN_ENTITLEMENTS = DM/DM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
 				INFOPLIST_FILE = DM/Info.plist;
@@ -803,7 +811,8 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E5D3230B948057F23F88766 /* Pods-DM.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-8";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-9";
+				CODE_SIGN_ENTITLEMENTS = DM/DM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
 				INFOPLIST_FILE = DM/Info.plist;

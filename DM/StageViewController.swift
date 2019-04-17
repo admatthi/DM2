@@ -53,6 +53,8 @@ class StageViewController: UIViewController {
       
         
         descriptions.append("Ending your coaching with a conversation about your progress, personal growth, and healing. Your private coach stays available for you and you can always come back.")
+        descriptions.append("Ending your coaching with a conversation about your progress, personal growth, and healing. Your private coach stays available for you and you can always come back.")
+        
         titlelbel.text = titlelabels[selectedbutton]
         length.text = lengths[selectedbutton]
         descriptionlabel.text = descriptions[selectedbutton]

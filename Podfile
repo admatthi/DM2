@@ -11,6 +11,8 @@ pod 'Firebase/Storage'
 pod 'Firebase/Core'
 pod 'FBSDKCoreKit'
 pod 'Purchases'
+pod 'Firebase/Messaging'
+
 
   # Pods for DM
 

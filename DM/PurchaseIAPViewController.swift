@@ -30,7 +30,7 @@ class PurchaseIAPViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    var purchases = Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: "my_app_user_id")
+    var purchases = Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: nil)
 
    
     @IBAction func tapRestore(_ sender: Any) {
@@ -44,27 +44,65 @@ class PurchaseIAPViewController: UIViewController {
         
         
         if productselected == "Yearly" {
-//        purchases.entitlements { entitlements in
-//            guard let pro = entitlements?["premium"] else { return }
-//            guard let monthly = pro.offerings["yearly"] else { return }
-//            guard let product = yearly.activeProduct else { return }
-//            self.purchases.makePurchase(product)
-//
-//
-//        }
-//
-//            Purchases.makePurchase(<#T##Purchases#>)
+            
+         
+        purchases.entitlements { (entitlements, error) in
+            guard let pro = entitlements?["premium"] else { return }
+            guard let monthly = pro.offerings["yearly"] else { return }
+            guard let product = monthly.activeProduct else { return }
+            
+            self.purchases.makePurchase(product, { (transaction, purchaserInfo, error, cancelled) in
+                if let purchaserInfo = purchaserInfo {
+                    
+                    if purchaserInfo.activeEntitlements.contains("my_entitlement_identifier") {
+                        // Unlock that great "pro" content
+                        
+                        self.performSegue(withIdentifier: "PayToChat", sender: self)
+                    }
+                    
+                }
+            })
+
+
+        }
             
         } else {
             
-//            purchases.entitlements { entitlements in
-//                guard let pro = entitlements?["premium"] else { return }
-//                guard let monthly = pro.offerings["monthly"] else { return }
-//                guard let product = yearly.activeProduct else { return }
-//                self.purchases.makePurchase(product)
-//                
-//                
-//            }
+            purchases.entitlements { (entitlements, error) in
+                guard let pro = entitlements?["premium"] else { return }
+                guard let monthly = pro.offerings["monthly"] else { return }
+                guard let product = monthly.activeProduct else { return }
+                
+       
+                self.purchases.makePurchase(product, { (transaction, purchaserInfo, error, cancelled) in
+                    
+                    print(error?.localizedDescription)
+
+                    if let purchaserInfo = purchaserInfo {
+                        
+                        ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
+
+                        DispatchQueue.main.async {
+                            
+                            self.performSegue(withIdentifier: "PayToChat", sender: self)
+                        }
+                        
+//                        if purchaserInfo.activeEntitlements.contains("my_entitlement_identifier") {
+//                            // Unlock that great "pro" content
+//                            
+//                            
+//                         
+//                          
+//                        }
+                        
+                    } else {
+                        
+                        print(error?.localizedDescription)
+                    }
+                })
+                
+                
+            }
             
         }
     }
@@ -83,6 +121,13 @@ class PurchaseIAPViewController: UIViewController {
         tapyearly.alpha = 1
     }
     
+    @IBAction func tapAccept(_ sender: Any) {
+        
+        if let url = NSURL(string: "https://www.dmndsjewelry.com/pages/terms"
+            ) {
+            UIApplication.shared.openURL(url as URL)
+        }
+    }
     /*
     // MARK: - Navigation
 

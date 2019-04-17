@@ -416,7 +416,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        
+        self.inputBar.alpha = 0
         NotificationCenter.default.removeObserver(self)
         Message.markMessagesRead(forUserID: uid)
     }
