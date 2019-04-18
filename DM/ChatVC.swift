@@ -408,7 +408,8 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     //MARK: ViewController lifecycle
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        self.inputBar.backgroundColor = UIColor.clear
+        self.inputBar.alpha = 1
+        self.inputBar.backgroundColor = UIColor.white
         self.view.layoutIfNeeded()
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.showKeyboard(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
@@ -416,7 +417,7 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        self.inputBar.alpha = 0
+//        self.inputBar.alpha = 0
         NotificationCenter.default.removeObserver(self)
         Message.markMessagesRead(forUserID: uid)
     }
