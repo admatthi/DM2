@@ -817,6 +817,7 @@
                             <constraint firstAttribute="trailing" secondItem="mXv-Wa-sgK" secondAttribute="trailing" id="0Tk-C1-UsC"/>
                             <constraint firstAttribute="bottom" secondItem="0I1-tm-nYA" secondAttribute="bottom" id="0Vl-gG-lvZ"/>
                             <constraint firstItem="noO-df-r8p" firstAttribute="top" secondItem="mXv-Wa-sgK" secondAttribute="bottom" id="4Lx-VL-1qk"/>
+                            <constraint firstAttribute="bottom" secondItem="0I1-tm-nYA" secondAttribute="bottom" id="9ln-Qz-ToY"/>
                             <constraint firstItem="mXv-Wa-sgK" firstAttribute="leading" secondItem="Hp0-e2-dDk" secondAttribute="leading" id="Ca2-cY-lMc"/>
                             <constraint firstItem="dee-Jz-Bs0" firstAttribute="centerY" secondItem="Uek-T5-7SP" secondAttribute="centerY" constant="-2.5" id="GIn-JZ-lbb"/>
                             <constraint firstAttribute="trailing" secondItem="m0q-Ad-UZf" secondAttribute="trailing" id="OLS-5X-1UR"/>
@@ -841,8 +842,8 @@
                         <outlet property="inputBar" destination="jci-6r-I5f" id="qEm-It-Lcs"/>
                         <outlet property="inputTextField" destination="XEo-XG-jia" id="1wI-Z9-Sj0"/>
                         <outlet property="tableView" destination="0I1-tm-nYA" id="bsM-mc-dcU"/>
-                        <segue destination="xRK-54-C5e" kind="show" identifier="ChatToProfile" id="0Hs-g8-hBq"/>
-                        <segue destination="6mv-va-EZh" kind="show" identifier="ChatToAccount" id="oR7-4S-EOt"/>
+                        <segue destination="xRK-54-C5e" kind="show" identifier="ChatToProfile" customClass="SegueFromRight" customModule="DM" customModuleProvider="target" id="0Hs-g8-hBq"/>
+                        <segue destination="6mv-va-EZh" kind="show" identifier="ChatToAccount" customClass="SegueFromLeft" customModule="DM" customModuleProvider="target" id="oR7-4S-EOt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FsC-5h-7ot" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1782,7 +1783,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="j4r-Rx-g1K" kind="show" id="cHp-rI-t2t"/>
+                                    <segue destination="j4r-Rx-g1K" kind="show" customClass="SegueFromRight" customModule="DM" customModuleProvider="target" id="cHp-rI-t2t"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dJ-6N-hRB">
@@ -1795,7 +1796,7 @@
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMg-fb-YLD">
+                            <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMg-fb-YLD">
                                 <rect key="frame" x="16" y="20" width="81" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="81" id="Qwx-Jr-0Up"/>
@@ -1833,7 +1834,7 @@
                     <connections>
                         <outlet property="tableView" destination="u1I-L6-Qgr" id="xKW-wJ-nS9"/>
                         <segue destination="nu7-y2-1EC" kind="show" identifier="AccountToSection" id="7Lm-YP-5An"/>
-                        <segue destination="nu7-y2-1EC" kind="show" id="qnt-Kb-cNb"/>
+                        <segue destination="nu7-y2-1EC" kind="show" customClass="SegueFromLeft" customModule="DM" customModuleProvider="target" id="qnt-Kb-cNb"/>
                         <segue destination="Kra-bI-cgA" kind="show" identifier="AccountToPurchase" id="JBK-80-lGc"/>
                         <segue destination="O5c-e5-E6b" kind="show" id="ggA-sI-pBM"/>
                         <segue destination="O5c-e5-E6b" kind="show" identifier="AccountToRegister" id="LBb-6d-Js6"/>
@@ -2033,8 +2034,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alek Matthiessen" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS9-1p-KOi">
                                 <rect key="frame" x="16" y="27" width="343" height="40"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="RjC-l1-3hm"/>
-                                    <constraint firstAttribute="height" constant="40" id="dTy-2F-csr"/>
+                                    <constraint firstAttribute="height" constant="40" id="sG8-nV-eAH"/>
+                                    <constraint firstAttribute="width" constant="343" id="woI-20-EfW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="BasisGrotesquePro-Bold" family="Basis Grotesque Pro" pointSize="22"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2253,30 +2254,33 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRU-qB-HzO">
                                 <rect key="frame" x="0.0" y="17" width="60" height="60"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="UfJ-sL-6OK"/>
-                                    <constraint firstAttribute="width" constant="60" id="dmJ-c7-RTo"/>
+                                    <constraint firstAttribute="height" constant="60" id="6ir-If-M0d"/>
+                                    <constraint firstAttribute="width" constant="60" id="7A2-eX-oTb"/>
                                 </constraints>
                                 <state key="normal" title="Chat">
                                     <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="j4r-Rx-g1K" kind="show" id="pl2-I9-vES"/>
+                                    <segue destination="j4r-Rx-g1K" kind="show" customClass="SegueFromLeft" customModule="DM" customModuleProvider="target" id="pl2-I9-vES"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="CRU-qB-HzO" firstAttribute="leading" secondItem="HjJ-Af-JbM" secondAttribute="leading" id="9OK-yM-wFG"/>
                             <constraint firstItem="Jdx-rj-aft" firstAttribute="trailing" secondItem="HjJ-Af-JbM" secondAttribute="trailing" id="Bjs-l0-aKL"/>
-                            <constraint firstItem="Jdx-rj-aft" firstAttribute="top" secondItem="CRU-qB-HzO" secondAttribute="bottom" constant="8" id="Epo-ne-wiA"/>
-                            <constraint firstItem="CRU-qB-HzO" firstAttribute="top" secondItem="HjJ-Af-JbM" secondAttribute="top" constant="-3" id="HPB-it-RPS"/>
                             <constraint firstItem="owC-sO-O3W" firstAttribute="top" secondItem="ms1-cw-Meh" secondAttribute="top" id="HYb-DI-Xtu"/>
+                            <constraint firstItem="Jdx-rj-aft" firstAttribute="bottom" secondItem="HjJ-Af-JbM" secondAttribute="bottom" id="ID0-RJ-ta3"/>
+                            <constraint firstItem="CRU-qB-HzO" firstAttribute="centerY" secondItem="hS9-1p-KOi" secondAttribute="centerY" id="JkD-On-pDj"/>
+                            <constraint firstItem="hS9-1p-KOi" firstAttribute="top" secondItem="ms1-cw-Meh" secondAttribute="topMargin" constant="7" id="Jnp-FN-RlO"/>
+                            <constraint firstItem="Jdx-rj-aft" firstAttribute="top" secondItem="CRU-qB-HzO" secondAttribute="bottom" constant="8" id="Xf5-Xl-xgT"/>
                             <constraint firstItem="owC-sO-O3W" firstAttribute="leading" secondItem="HjJ-Af-JbM" secondAttribute="leading" id="ZMY-ob-MaR"/>
+                            <constraint firstItem="hS9-1p-KOi" firstAttribute="centerX" secondItem="ms1-cw-Meh" secondAttribute="centerX" id="cXP-T4-R7g"/>
                             <constraint firstItem="owC-sO-O3W" firstAttribute="trailing" secondItem="HjJ-Af-JbM" secondAttribute="trailing" id="egq-0q-MK3"/>
-                            <constraint firstItem="CRU-qB-HzO" firstAttribute="leading" secondItem="HjJ-Af-JbM" secondAttribute="leading" id="glD-0d-yP3"/>
-                            <constraint firstItem="hS9-1p-KOi" firstAttribute="top" secondItem="ms1-cw-Meh" secondAttribute="top" constant="27" id="hvk-qu-dHi"/>
+                            <constraint firstItem="Jdx-rj-aft" firstAttribute="leading" secondItem="HjJ-Af-JbM" secondAttribute="leading" id="nRO-Xn-Gnf"/>
                             <constraint firstItem="Jdx-rj-aft" firstAttribute="leading" secondItem="HjJ-Af-JbM" secondAttribute="leading" id="uCS-kd-Bew"/>
-                            <constraint firstItem="hS9-1p-KOi" firstAttribute="centerX" secondItem="ms1-cw-Meh" secondAttribute="centerX" id="vEc-1J-qnj"/>
                             <constraint firstItem="Jdx-rj-aft" firstAttribute="bottom" secondItem="HjJ-Af-JbM" secondAttribute="bottom" id="yWz-Nu-g5r"/>
+                            <constraint firstItem="Jdx-rj-aft" firstAttribute="trailing" secondItem="HjJ-Af-JbM" secondAttribute="trailing" id="yt6-m2-dSe"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HjJ-Af-JbM"/>
                     </view>
@@ -2471,7 +2475,7 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
                                     <constraint firstAttribute="height" constant="50" id="lNL-ia-dqW"/>
                                     <constraint firstAttribute="width" constant="50" id="zJ6-wS-YfO"/>
                                 </constraints>
-                                <state key="normal" image="Forward">
+                                <state key="normal" image="Artboard Copy 5">
                                     <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -2738,7 +2742,7 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
                                     <constraint firstAttribute="height" constant="50" id="Hmx-2F-FRs"/>
                                     <constraint firstAttribute="width" constant="50" id="fdG-px-PvL"/>
                                 </constraints>
-                                <state key="normal" image="Forward">
+                                <state key="normal" image="Artboard Copy 5">
                                     <color key="titleColor" red="0.1176470588" green="0.1176470588" blue="0.20784313730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -2970,6 +2974,7 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
         <image name="Artboard Copy 2" width="60" height="60"/>
         <image name="Artboard Copy 4" width="60" height="60"/>
         <image name="Artboard Copy 4-1" width="60" height="60"/>
+        <image name="Artboard Copy 5" width="60" height="60"/>
         <image name="BackL" width="60" height="60"/>
         <image name="Bitmap" width="375" height="286"/>
         <image name="Bitmap-1" width="288" height="280"/>
@@ -3004,10 +3009,10 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="LBb-6d-Js6"/>
-        <segue reference="7Lm-YP-5An"/>
-        <segue reference="kq3-s2-j7U"/>
-        <segue reference="oR7-4S-EOt"/>
-        <segue reference="hSD-TU-zCB"/>
+        <segue reference="qnt-Kb-cNb"/>
+        <segue reference="JBK-80-lGc"/>
+        <segue reference="Knn-vD-jMK"/>
+        <segue reference="pl2-I9-vES"/>
         <segue reference="KpM-Kk-Eed"/>
     </inferredMetricsTieBreakers>
 </document>

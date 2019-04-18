@@ -49,12 +49,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             application.registerUserNotificationSettings(settings)
         }
         
-        Messaging.messaging().delegate = self
 
         application.registerForRemoteNotifications()
         
         FirebaseApp.configure()
-        
+        Messaging.messaging().delegate = self
+
+    
         
         Purchases.debugLogsEnabled = true
         Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: nil)
@@ -103,6 +104,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         return true
     }
     
+    func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String) {
+        
+        print("Firebase registration token: \(fcmToken)")
+        
+        let dataDict:[String: String] = ["token": fcmToken]
+        
+        NotificationCenter.default.post(name: Notification.Name("FCMToken"), object: nil, userInfo: dataDict)
+            
+        InstanceID.instanceID().instanceID { (result, error) in
+            if let error = error {
+                print("Error fetching remote instance ID: \(error)")
+            } else if let result = result {
+                print("Remote instance ID token: \(result.token)")
+                
+//                self.instanceIDTokenMessage.text  = "Remote InstanceID token: \(result.token)"
+            }
+        }
+        
+    }
+    
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
         // If you are receiving a notification message while your app is in the background,
         // this callback will not be fired till the user taps on the notification launching the application.
@@ -112,9 +133,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         // Messaging.messaging().appDidReceiveMessage(userInfo)
         
         // Print message ID.
-        if let messageID = userInfo[gcmMessageIDKey] {
-            print("Message ID: \(messageID)")
-        }
+//        if let messageID = userInfo[gcmMessageIDKey] {
+//            print("Message ID: \(messageID)")
+//        }
         
         // Print full message.
         print(userInfo)
@@ -124,6 +145,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
+        
     }
     
     func applicationDidEnterBackground(_ application: UIApplication) {
@@ -207,5 +229,52 @@ extension AppDelegate: PurchasesDelegate {
     func purchases(_ purchases: Purchases, failedToRestoreTransactionsWithError error: Error) {
         print(error)
         
+    }
+}
+
+
+class SegueFromLeft: UIStoryboardSegue
+{
+    override func perform()
+    {
+        let src = self.source
+        let dst = self.destination
+        
+        src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+        dst.view.transform = CGAffineTransform(translationX: -src.view.frame.size.width, y: 0)
+        
+        UIView.animate(withDuration: 0.25,
+                       delay: 0.0,
+                       options: UIView.AnimationOptions.curveEaseInOut,
+                       animations: {
+                        dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
+        },
+                       completion: { finished in
+                        src.present(dst, animated: false, completion: nil)
+        }
+        )
+    }
+}
+
+class SegueFromRight: UIStoryboardSegue
+{
+    override func perform()
+    {
+        let src = self.source
+        let dst = self.destination
+        
+        src.view.superview?.insertSubview(dst.view, aboveSubview: src.view)
+        dst.view.transform = CGAffineTransform(translationX: src.view.frame.size.width, y: 0)
+        
+        UIView.animate(withDuration: 0.25,
+                       delay: 0.0,
+                       options: UIView.AnimationOptions.curveEaseInOut,
+                       animations: {
+                        dst.view.transform = CGAffineTransform(translationX: 0, y: 0)
+        },
+                       completion: { finished in
+                        src.present(dst, animated: false, completion: nil)
+        }
+        )
     }
 }
