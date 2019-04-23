@@ -83,12 +83,6 @@
 		9D65812722615A05003F9A08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D65812622615A04003F9A08 /* Main.storyboard */; };
 		9D65812822615A05003F9A08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D65812622615A04003F9A08 /* Main.storyboard */; };
 		9D65812922615A05003F9A08 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9D65812622615A04003F9A08 /* Main.storyboard */; };
-		9DA3BDA52263E11200C6BA7F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDA42263E11200C6BA7F /* ProfileViewController.swift */; };
-		9DA3BDA62263E11200C6BA7F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDA42263E11200C6BA7F /* ProfileViewController.swift */; };
-		9DA3BDA72263E11200C6BA7F /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDA42263E11200C6BA7F /* ProfileViewController.swift */; };
-		9DA3BDA92263E12E00C6BA7F /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDA82263E12E00C6BA7F /* ProfileTableViewCell.swift */; };
-		9DA3BDAA2263E12E00C6BA7F /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDA82263E12E00C6BA7F /* ProfileTableViewCell.swift */; };
-		9DA3BDAB2263E12E00C6BA7F /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDA82263E12E00C6BA7F /* ProfileTableViewCell.swift */; };
 		9DA3BDAD2263E5E400C6BA7F /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDAC2263E5E400C6BA7F /* StageViewController.swift */; };
 		9DA3BDAE2263E5E400C6BA7F /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDAC2263E5E400C6BA7F /* StageViewController.swift */; };
 		9DA3BDAF2263E5E400C6BA7F /* StageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDAC2263E5E400C6BA7F /* StageViewController.swift */; };
@@ -96,6 +90,9 @@
 		9DA3BDB22263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDB02263F2F100C6BA7F /* PurchaseIAPViewController.swift */; };
 		9DA3BDB32263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DA3BDB02263F2F100C6BA7F /* PurchaseIAPViewController.swift */; };
 		9DA3BDB52263FB1B00C6BA7F /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9DA3BDB42263FB1B00C6BA7F /* StoreKit.framework */; };
+		9DD9B256226C12C7009121C7 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9B255226C12C7009121C7 /* HomePageViewController.swift */; };
+		9DD9B258226C1419009121C7 /* LessonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9B257226C1419009121C7 /* LessonTableViewCell.swift */; };
+		9DD9B25A226C142E009121C7 /* CategoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DD9B259226C142E009121C7 /* CategoriesCollectionViewCell.swift */; };
 		9E280BC276FFB44708CC582B /* Pods_DMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCDA44E12445022B4A34D9F4 /* Pods_DMTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -158,12 +155,13 @@
 		9D658112226159F7003F9A08 /* VCCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCCells.swift; sourceTree = "<group>"; };
 		9D658113226159F7003F9A08 /* WelcomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		9D65812622615A04003F9A08 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		9DA3BDA42263E11200C6BA7F /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		9DA3BDA82263E12E00C6BA7F /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9D8B72D322693DA700A91927 /* DM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DM.entitlements; sourceTree = "<group>"; };
 		9DA3BDAC2263E5E400C6BA7F /* StageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StageViewController.swift; sourceTree = "<group>"; };
 		9DA3BDB02263F2F100C6BA7F /* PurchaseIAPViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseIAPViewController.swift; sourceTree = "<group>"; };
 		9DA3BDB42263FB1B00C6BA7F /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
-		9DF35A382267D73800D4579F /* DM.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DM.entitlements; sourceTree = "<group>"; };
+		9DD9B255226C12C7009121C7 /* HomePageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		9DD9B257226C1419009121C7 /* LessonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonTableViewCell.swift; sourceTree = "<group>"; };
+		9DD9B259226C142E009121C7 /* CategoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionViewCell.swift; sourceTree = "<group>"; };
 		9E5D3230B948057F23F88766 /* Pods-DM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DM.release.xcconfig"; path = "Pods/Target Support Files/Pods-DM/Pods-DM.release.xcconfig"; sourceTree = "<group>"; };
 		D567C2C47364E39CEAC6F74C /* Pods-DMUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMUITests/Pods-DMUITests.release.xcconfig"; sourceTree = "<group>"; };
 		DCDA44E12445022B4A34D9F4 /* Pods_DMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -244,10 +242,11 @@
 		9D6580AB226158FF003F9A08 /* DM */ = {
 			isa = PBXGroup;
 			children = (
-				9DF35A382267D73800D4579F /* DM.entitlements */,
+				9D8B72D322693DA700A91927 /* DM.entitlements */,
 				9D6580AC226158FF003F9A08 /* AppDelegate.swift */,
 				9D6580AE226158FF003F9A08 /* ViewController.swift */,
 				9D65812622615A04003F9A08 /* Main.storyboard */,
+				9DD9B254226C12A9009121C7 /* New Group1 */,
 				9D40C7D72262E3510064BBC4 /* New Group */,
 				9D658111226159F6003F9A08 /* LandingVC.swift */,
 				9D658110226159F6003F9A08 /* ChatVC.swift */,
@@ -257,7 +256,6 @@
 				9D6580EB226159D6003F9A08 /* AccountOverviewViewController.swift */,
 				9DA3BDB02263F2F100C6BA7F /* PurchaseIAPViewController.swift */,
 				9D6580E7226159D6003F9A08 /* AccountTableViewCell.swift */,
-				9DA3BDA42263E11200C6BA7F /* ProfileViewController.swift */,
 				9D6580E9226159D6003F9A08 /* CoachTableViewCell.swift */,
 				9DA3BDAC2263E5E400C6BA7F /* StageViewController.swift */,
 				9D6580EA226159D6003F9A08 /* BuyNowViewController.swift */,
@@ -269,7 +267,6 @@
 				9D40C7C322619BDE0064BBC4 /* RegisterViewController.swift */,
 				9D40C7C522619BE80064BBC4 /* SignInViewController.swift */,
 				9D6580B322615904003F9A08 /* Assets.xcassets */,
-				9DA3BDA82263E12E00C6BA7F /* ProfileTableViewCell.swift */,
 				9D6580E6226159D6003F9A08 /* CoachViewController.swift */,
 				9D6580B522615904003F9A08 /* LaunchScreen.storyboard */,
 				9D6580B822615904003F9A08 /* Info.plist */,
@@ -297,6 +294,16 @@
 				9D6580CE22615905003F9A08 /* Info.plist */,
 			);
 			path = DMUITests;
+			sourceTree = "<group>";
+		};
+		9DD9B254226C12A9009121C7 /* New Group1 */ = {
+			isa = PBXGroup;
+			children = (
+				9DD9B255226C12C7009121C7 /* HomePageViewController.swift */,
+				9DD9B259226C142E009121C7 /* CategoriesCollectionViewCell.swift */,
+				9DD9B257226C1419009121C7 /* LessonTableViewCell.swift */,
+			);
+			path = "New Group1";
 			sourceTree = "<group>";
 		};
 		CD1B5C56E42D026BB2906E1C /* Pods */ = {
@@ -560,14 +567,14 @@
 			files = (
 				9D40C7C622619BE90064BBC4 /* SignInViewController.swift in Sources */,
 				9D65811D226159F7003F9A08 /* LandingVC.swift in Sources */,
-				9DA3BDA92263E12E00C6BA7F /* ProfileTableViewCell.swift in Sources */,
 				9D6580AF226158FF003F9A08 /* ViewController.swift in Sources */,
 				9D658120226159F7003F9A08 /* VCCells.swift in Sources */,
 				9D6580FB226159D7003F9A08 /* AccountOverviewViewController.swift in Sources */,
 				9D40C7C422619BDE0064BBC4 /* RegisterViewController.swift in Sources */,
-				9DA3BDA52263E11200C6BA7F /* ProfileViewController.swift in Sources */,
+				9DD9B25A226C142E009121C7 /* CategoriesCollectionViewCell.swift in Sources */,
 				9D6580EF226159D7003F9A08 /* AccountTableViewCell.swift in Sources */,
 				9D6580F5226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
+				9DD9B258226C1419009121C7 /* LessonTableViewCell.swift in Sources */,
 				9D6580AD226158FF003F9A08 /* AppDelegate.swift in Sources */,
 				9D658117226159F7003F9A08 /* ConversationsVC.swift in Sources */,
 				9D658108226159EE003F9A08 /* Conversation.swift in Sources */,
@@ -580,6 +587,7 @@
 				9D658114226159F7003F9A08 /* NavVC.swift in Sources */,
 				9D65810B226159EE003F9A08 /* Message.swift in Sources */,
 				9D658123226159F7003F9A08 /* WelcomeVC.swift in Sources */,
+				9DD9B256226C12C7009121C7 /* HomePageViewController.swift in Sources */,
 				9D658105226159EE003F9A08 /* User.swift in Sources */,
 				9D6580F8226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
 				9D40C7D92262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
@@ -600,11 +608,9 @@
 				9D6580F9226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
 				9DA3BDB22263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */,
 				9D6580F6226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
-				9DA3BDA62263E11200C6BA7F /* ProfileViewController.swift in Sources */,
 				9D658106226159EE003F9A08 /* User.swift in Sources */,
 				9D65811B226159F7003F9A08 /* ChatVC.swift in Sources */,
 				9D40C7DA2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
-				9DA3BDAA2263E12E00C6BA7F /* ProfileTableViewCell.swift in Sources */,
 				9D65810C226159EE003F9A08 /* Message.swift in Sources */,
 				9DA3BDAE2263E5E400C6BA7F /* StageViewController.swift in Sources */,
 				9D6580C222615905003F9A08 /* DMTests.swift in Sources */,
@@ -629,11 +635,9 @@
 				9D6580FA226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
 				9DA3BDB32263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */,
 				9D6580F7226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
-				9DA3BDA72263E11200C6BA7F /* ProfileViewController.swift in Sources */,
 				9D658107226159EE003F9A08 /* User.swift in Sources */,
 				9D65811C226159F7003F9A08 /* ChatVC.swift in Sources */,
 				9D40C7DB2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
-				9DA3BDAB2263E12E00C6BA7F /* ProfileTableViewCell.swift in Sources */,
 				9D65810D226159EE003F9A08 /* Message.swift in Sources */,
 				9DA3BDAF2263E5E400C6BA7F /* StageViewController.swift in Sources */,
 				9D6580CD22615905003F9A08 /* DMUITests.swift in Sources */,
@@ -791,7 +795,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC46100BE80406C9BBF2C08B /* Pods-DM.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-9";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-10";
 				CODE_SIGN_ENTITLEMENTS = DM/DM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
@@ -811,7 +815,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E5D3230B948057F23F88766 /* Pods-DM.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-9";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-10";
 				CODE_SIGN_ENTITLEMENTS = DM/DM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;

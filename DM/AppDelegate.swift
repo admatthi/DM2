@@ -43,7 +43,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
             UNUserNotificationCenter.current().requestAuthorization(
                 options: authOptions,
                 completionHandler: {_, _ in })
+            
         } else {
+            
             let settings: UIUserNotificationSettings =
                 UIUserNotificationSettings(types: [.alert, .badge, .sound], categories: nil)
             application.registerUserNotificationSettings(settings)
@@ -55,17 +57,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         FirebaseApp.configure()
         Messaging.messaging().delegate = self
 
-        var tabBar: UITabBarController = self.window?.rootViewController as! UITabBarController
-        
-        
-        tabBar.selectedIndex = 1
+//        var tabBar: UITabBarController = self.window?.rootViewController as! UITabBarController
+//
+//
+//        tabBar.selectedIndex = 1
         
         Purchases.debugLogsEnabled = true
         Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: nil)
         
         ref = Database.database().reference()
         
-        if Auth.auth().currentUser == nil {
+//        if Auth.auth().currentUser == nil {
             //
             
 //            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
@@ -79,31 +81,31 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //            self.window = UIWindow(frame: UIScreen.main.bounds)
 //            self.window?.rootViewController = initialViewControlleripad
 //            self.window?.makeKeyAndVisible()
-            
-        } else {
-            
-            uid = (Auth.auth().currentUser?.uid)!
-            
-            if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
-                
-                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Conversations") as UIViewController
-                self.window = UIWindow(frame: UIScreen.main.bounds)
-                self.window?.rootViewController = initialViewControlleripad
-                self.window?.makeKeyAndVisible()
-                
-            } else {
-                
+//
+//        } else {
+//
+//            uid = (Auth.auth().currentUser?.uid)!
+//
+//            if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
+//
+//                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Conversations") as UIViewController
+//                self.window = UIWindow(frame: UIScreen.main.bounds)
+//                self.window?.rootViewController = initialViewControlleripad
+//                self.window?.makeKeyAndVisible()
+//
+//            } else {
+//
 //                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Chat") as UIViewController
 //                self.window = UIWindow(frame: UIScreen.main.bounds)
 //                self.window?.rootViewController = initialViewControlleripad
 //                self.window?.makeKeyAndVisible()
-                
-                
-            }
-        }
-        
+//
+//
+//            }
+//        }
+//
         return true
     }
     
