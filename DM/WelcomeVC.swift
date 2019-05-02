@@ -24,7 +24,7 @@
 import UIKit
 import Photos
 import Firebase
-
+import FirebaseAuth
 class WelcomeVC: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     //MARK: Properties

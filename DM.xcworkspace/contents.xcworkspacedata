@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/alekmatthiessen/Desktop/DM/DM/New Group2/SignUpViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:DM.xcodeproj">
    </FileRef>
    <FileRef

@@ -50,11 +50,11 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
                 
                 if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
                     
-                    self.performSegue(withIdentifier: "SignInToConversations", sender: self)
+                    self.performSegue(withIdentifier: "SignInToHome5", sender: self)
 
                 } else {
                     
-                    self.performSegue(withIdentifier: "SignInToChat", sender: self)
+                    self.performSegue(withIdentifier: "SignInToHome5", sender: self)
 
                 }
                 

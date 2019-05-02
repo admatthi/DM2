@@ -25,8 +25,11 @@ import UIKit
 import Photos
 import Firebase
 import CoreLocation
+import FirebaseAuth
 
 var uid = String()
+
+var selectedimage = UIImage()
 
 class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate,  UINavigationControllerDelegate, UIImagePickerControllerDelegate, CLLocationManagerDelegate {
     
@@ -274,6 +277,57 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         }
     }
     
+    @IBAction func tapShowTip(_ sender: Any) {
+        
+   
+        
+        if tippressed {
+            
+            inputBar.alpha = 1
+            hidetipping()
+            tapshowtip.alpha = 1
+            tippressed = false
+        } else {
+            showtipping()
+            tapshowtip.alpha = 0.5
+            inputBar.alpha = 0
+            tippressed = true
+        }
+    }
+    
+    @IBOutlet weak var backlabel: UILabel!
+    var tippressed = Bool()
+    @IBOutlet weak var tapshowtip: UIButton!
+    func hidetipping() {
+        taptip.alpha = 0
+        b2.alpha = 0
+        b1.alpha = 0
+        b3.alpha = 0
+        backlabel.alpha = 0
+    }
+    
+    
+    func showtipping() {
+        taptip.alpha = 1
+        b2.alpha = 1
+        b1.alpha = 1
+        b3.alpha = 1
+        backlabel.alpha = 1
+    }
+    @IBAction func tapPlus(_ sender: Any) {
+    }
+    @IBAction func tapMinus(_ sender: Any) {
+    }
+    @IBAction func tapTip(_ sender: Any) {
+    }
+    @IBOutlet weak var taptip: UIButton!
+    @IBOutlet weak var tapplus: UIButton!
+    @IBOutlet weak var pricelabel: UILabel!
+
+    @IBOutlet weak var b2: UIButton!
+    @IBOutlet weak var b3: UIButton!
+    @IBOutlet weak var b1: UIButton!
+    
     //MARK: Delegates
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.items.count
@@ -414,6 +468,10 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         NotificationCenter.default.addObserver(self, selector: #selector(ChatVC.showKeyboard(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
     }
     
+    @IBAction func tapBack(_ sender: Any) {
+        
+        self.dismiss(animated: true, completion: nil)
+    }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -423,15 +481,27 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
         Message.markMessagesRead(forUserID: uid)
     }
     
+    @IBOutlet weak var profileimage: UIImageView!
+    @IBOutlet weak var nametext: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        ref = Database.database().reference()
+
+        taptip.layer.cornerRadius = 22.0
+        taptip.layer.masksToBounds = true
         
+        ref = Database.database().reference()
+        hidetipping()
+        tippressed = false
+        profileimage.layer.masksToBounds = false
+        profileimage.layer.cornerRadius = profileimage.frame.height/2
+        profileimage.clipsToBounds = true
         tableView.layer.cornerRadius = 5.0
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.fetchData2(_:)), name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
 
+        nametext.text = selectedname2
+        profileimage.image = selectedimage
         
         if uid == ""  {
 
@@ -440,8 +510,9 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
                 print(error?.localizedDescription)
                 uid = NSUUID().uuidString
                 
-                let content = "Hi, welcome to Help! I'm Alek, your consultation coach. I'll be explaining how Help works and guiding you through our subscription options for working with a weight loss coach here. When you're ready to start being coached, I'll help you find a coach who is best suited to your specific health needs. Would you please share your name, age, and what health concerns you would like to work on?"
+//                let content = "Hi, welcome to Help! I'm Alek, your consultation coach. I'll be explaining how Help works and guiding you through our subscription options for working with a weight loss coach here. When you're ready to start being coached, I'll help you find a coach who is best suited to your specific health needs. Would you please share your name, age, and what health concerns you would like to work on?"
                 
+                let content = "hey:) thanks for checking out my profile. what are u lookin for?"
                 
                 let values = ["type": "text", "content": content, "fromID": "rmmMbNlS5ZPoE2OPTOetUVYBWqf2", "toID": uid, "timestamp": Int(Date().timeIntervalSince1970), "isRead": false] as [String : Any]
                 

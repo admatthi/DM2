@@ -11,7 +11,7 @@ import Firebase
 import Purchases
 import FirebaseMessaging
 import UserNotifications
-
+import FirebaseAuth
 protocol SnippetsPurchasesDelegate: AnyObject {
     
     func purchaseCompleted(product: String)

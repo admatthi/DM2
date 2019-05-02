@@ -24,7 +24,7 @@
 import UIKit
 import Firebase
 import AudioToolbox
-
+import FirebaseAuth
 class ConversationsVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     //MARK: Properties

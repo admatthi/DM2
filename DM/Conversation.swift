@@ -23,7 +23,7 @@
 import Foundation
 import UIKit
 import Firebase
-
+import FirebaseAuth
 class Conversation {
     
     //MARK: Properties
