@@ -10,6 +10,8 @@ import UIKit
 
 class PersonsCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var responsetime: UILabel!
     @IBOutlet weak var peopleimage: UIImageView!
     @IBOutlet weak var namelabel: UILabel!
+    @IBOutlet weak var headline: UILabel!
 }

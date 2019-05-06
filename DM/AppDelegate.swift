@@ -12,6 +12,7 @@ import Purchases
 import FirebaseMessaging
 import UserNotifications
 import FirebaseAuth
+
 protocol SnippetsPurchasesDelegate: AnyObject {
     
     func purchaseCompleted(product: String)
@@ -63,48 +64,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
 //        tabBar.selectedIndex = 1
         
         Purchases.debugLogsEnabled = true
-        Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: nil)
+
+        purchases = Purchases.configure(withAPIKey: "PoYCUyJuZSjXkCreijfZFeXMSIuqsWZX", appUserID: nil)
+        
+        purchases!.delegate = self
         
         ref = Database.database().reference()
         
-//        if Auth.auth().currentUser == nil {
-            //
+        if Auth.auth().currentUser == nil {
             
-//            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Register") as UIViewController
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window?.rootViewController = initialViewControlleripad
-//            self.window?.makeKeyAndVisible()
             
-//            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Chat") as UIViewController
-//            self.window = UIWindow(frame: UIScreen.main.bounds)
-//            self.window?.rootViewController = initialViewControlleripad
-//            self.window?.makeKeyAndVisible()
+            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Sales") as UIViewController
+            self.window = UIWindow(frame: UIScreen.main.bounds)
+            self.window?.rootViewController = initialViewControlleripad
+            self.window?.makeKeyAndVisible()
+            
+      
+
+        } else {
 //
-//        } else {
+            uid = (Auth.auth().currentUser?.uid)!
 //
-//            uid = (Auth.auth().currentUser?.uid)!
-//
-//            if uid == "rmmMbNlS5ZPoE2OPTOetUVYBWqf2" {
-//
-//                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Conversations") as UIViewController
-//                self.window = UIWindow(frame: UIScreen.main.bounds)
-//                self.window?.rootViewController = initialViewControlleripad
-//                self.window?.makeKeyAndVisible()
-//
-//            } else {
-//
-//                let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//                let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Chat") as UIViewController
-//                self.window = UIWindow(frame: UIScreen.main.bounds)
-//                self.window?.rootViewController = initialViewControlleripad
-//                self.window?.makeKeyAndVisible()
-//
-//
-//            }
-//        }
+         
+        }
 //
         return true
     }
@@ -174,17 +157,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         
-            ref?.child("Users").child(uid).updateChildValues(["Purchased" : "Yes"])
-            
-            let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            
-            
-            let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Chat") as UIViewController
-            self.window = UIWindow(frame: UIScreen.main.bounds)
-            self.window?.rootViewController = initialViewControlleripad
-            self.window?.makeKeyAndVisible()//
-            
-        }
+    ref?.child("Users").child(uid).updateChildValues(["Purchased" : "Yes"])
+        
+        let mainStoryboardIpad : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        let initialViewControlleripad : UIViewController = mainStoryboardIpad.instantiateViewController(withIdentifier: "Sign Up") as UIViewController
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.rootViewController = initialViewControlleripad
+        self.window?.makeKeyAndVisible()//
+        
+    }
         
     }
     
@@ -196,7 +179,7 @@ extension AppDelegate: PurchasesDelegate {
         
         self.purchasesdelegate?.purchaseCompleted(product: transaction.payment.productIdentifier)
         
-       
+        
         
         ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
         letsgo()
@@ -213,19 +196,19 @@ extension AppDelegate: PurchasesDelegate {
     func purchases(_ purchases: Purchases, failedToUpdatePurchaserInfoWithError error: Error) {
         print(error)
         
-
+        
     }
     
     func purchases(_ purchases: Purchases, failedTransaction transaction: SKPaymentTransaction, withReason failureReason: Error) {
         print(failureReason)
         
-
+        
     }
     
     func purchases(_ purchases: Purchases, restoredTransactionsWith purchaserInfo: PurchaserInfo) {
         //        handlePurchaserInfo(purchaserInfo)
         ref?.child("Users").child(uid).updateChildValues(["Purchased" : "True"])
-
+        
         letsgo()
         
         

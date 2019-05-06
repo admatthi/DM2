@@ -22,6 +22,17 @@
 		9D1581EA227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */; };
 		9D1581EB227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */; };
 		9D1581EC227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */; };
+		9D1BD324227F6C11009B5039 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD323227F6C11009B5039 /* CompletedViewController.swift */; };
+		9D2A0D60227E682200F9EC64 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D5F227E682200F9EC64 /* PlanViewController.swift */; };
+		9D2A0D62227F53A600F9EC64 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */; };
+		9D2A0D63227F53A600F9EC64 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */; };
+		9D2A0D64227F53A700F9EC64 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */; };
+		9D2A0D66227F543500F9EC64 /* PlayerViewClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D65227F543400F9EC64 /* PlayerViewClass copy.swift */; };
+		9D2A0D67227F543500F9EC64 /* PlayerViewClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D65227F543400F9EC64 /* PlayerViewClass copy.swift */; };
+		9D2A0D68227F543500F9EC64 /* PlayerViewClass copy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D65227F543400F9EC64 /* PlayerViewClass copy.swift */; };
+		9D2F9F35227E13B20057049E /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F9F34227E13B20057049E /* PurchasesViewController.swift */; };
+		9D2F9F36227E13B20057049E /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F9F34227E13B20057049E /* PurchasesViewController.swift */; };
+		9D2F9F37227E13B20057049E /* PurchasesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2F9F34227E13B20057049E /* PurchasesViewController.swift */; };
 		9D310BA22272BF0200C617B3 /* OverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D310BA12272BF0100C617B3 /* OverviewViewController.swift */; };
 		9D310BA822739A9C00C617B3 /* SignUpBuyerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D310BA722739A9C00C617B3 /* SignUpBuyerViewController.swift */; };
 		9D40C7C422619BDE0064BBC4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D40C7C322619BDE0064BBC4 /* RegisterViewController.swift */; };
@@ -136,8 +147,13 @@
 		9D1581E3227A645E009DABF8 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
 		9D1581E5227A648E009DABF8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesTableViewCell.swift; sourceTree = "<group>"; };
+		9D1BD323227F6C11009B5039 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		9D2A0D5F227E682200F9EC64 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
+		9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
+		9D2A0D65227F543400F9EC64 /* PlayerViewClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlayerViewClass copy.swift"; sourceTree = "<group>"; };
+		9D2F9F34227E13B20057049E /* PurchasesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchasesViewController.swift; sourceTree = "<group>"; };
 		9D310BA12272BF0100C617B3 /* OverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewViewController.swift; sourceTree = "<group>"; };
-		9D310BA722739A9C00C617B3 /* SignUpBuyerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpBuyerViewController.swift; path = ../../SignUpBuyerViewController.swift; sourceTree = "<group>"; };
+		9D310BA722739A9C00C617B3 /* SignUpBuyerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpBuyerViewController.swift; sourceTree = "<group>"; };
 		9D40C7C322619BDE0064BBC4 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		9D40C7C522619BE80064BBC4 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9D40C7C72262E2040064BBC4 /* BasisGrotesquePro-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BasisGrotesquePro-Regular.ttf"; sourceTree = "<group>"; };
@@ -167,7 +183,7 @@
 		9D658103226159ED003F9A08 /* Conversation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Conversation.swift; sourceTree = "<group>"; };
 		9D658104226159ED003F9A08 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		9D65810E226159F5003F9A08 /* NavVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavVC.swift; sourceTree = "<group>"; };
-		9D65810F226159F6003F9A08 /* ConversationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConversationsVC.swift; path = ../ConversationsVC.swift; sourceTree = "<group>"; };
+		9D65810F226159F6003F9A08 /* ConversationsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConversationsVC.swift; sourceTree = "<group>"; };
 		9D658110226159F6003F9A08 /* ChatVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		9D658111226159F6003F9A08 /* LandingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingVC.swift; sourceTree = "<group>"; };
 		9D658112226159F7003F9A08 /* VCCells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VCCells.swift; sourceTree = "<group>"; };
@@ -229,15 +245,11 @@
 		9D0A9EBD226EAF9D00CA0787 /* DM */ = {
 			isa = PBXGroup;
 			children = (
-				9D310BA722739A9C00C617B3 /* SignUpBuyerViewController.swift */,
+				9D41045B227DE63D006D33BD /* New Group */,
 				9D1581E5227A648E009DABF8 /* SignUpViewController.swift */,
-				9D310BA12272BF0100C617B3 /* OverviewViewController.swift */,
-				9D0A9EBE226EAFAE00CA0787 /* BrowseViewController.swift */,
 				9D1581E3227A645E009DABF8 /* ProfilesViewController.swift */,
 				9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */,
 				9D0A9EC0226EB02B00CA0787 /* People2CollectionViewCell.swift */,
-				9D0A9EC2226EB49F00CA0787 /* PersonsCollectionViewCell.swift */,
-				9D40C7C522619BE80064BBC4 /* SignInViewController.swift */,
 				9D658110226159F6003F9A08 /* ChatVC.swift */,
 			);
 			path = DM;
@@ -247,9 +259,22 @@
 			isa = PBXGroup;
 			children = (
 				9D40C7D82262E3AE0064BBC4 /* PeopleCollectionViewCell.swift */,
-				9D65810F226159F6003F9A08 /* ConversationsVC.swift */,
 			);
 			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9D41045B227DE63D006D33BD /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		9D41045C227DE64C006D33BD /* New Group2 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group2";
 			sourceTree = "<group>";
 		};
 		9D6580A0226158FF003F9A08 = {
@@ -280,6 +305,18 @@
 				9D8B72D322693DA700A91927 /* DM.entitlements */,
 				9D6580AC226158FF003F9A08 /* AppDelegate.swift */,
 				9D6580AE226158FF003F9A08 /* ViewController.swift */,
+				9D41045C227DE64C006D33BD /* New Group2 */,
+				9D310BA12272BF0100C617B3 /* OverviewViewController.swift */,
+				9D1BD323227F6C11009B5039 /* CompletedViewController.swift */,
+				9D0A9EBE226EAFAE00CA0787 /* BrowseViewController.swift */,
+				9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */,
+				9D2A0D5F227E682200F9EC64 /* PlanViewController.swift */,
+				9D2F9F34227E13B20057049E /* PurchasesViewController.swift */,
+				9D310BA722739A9C00C617B3 /* SignUpBuyerViewController.swift */,
+				9D40C7C522619BE80064BBC4 /* SignInViewController.swift */,
+				9D65810F226159F6003F9A08 /* ConversationsVC.swift */,
+				9D2A0D65227F543400F9EC64 /* PlayerViewClass copy.swift */,
+				9D0A9EC2226EB49F00CA0787 /* PersonsCollectionViewCell.swift */,
 				9D65812622615A04003F9A08 /* Main.storyboard */,
 				9D0A9EBD226EAF9D00CA0787 /* DM */,
 				9DD9B254226C12A9009121C7 /* New Group1 */,
@@ -512,7 +549,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-DM/Pods-DM-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-DM/Pods-DM-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
 				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
@@ -535,7 +572,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DM/Pods-DM-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DM/Pods-DM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		40D27C3B8DD6784B7AADB21E /* [CP] Check Pods Manifest.lock */ = {
@@ -615,7 +652,10 @@
 				9D1581E4227A645E009DABF8 /* ProfilesViewController.swift in Sources */,
 				9D658108226159EE003F9A08 /* Conversation.swift in Sources */,
 				9D6580FF226159E4003F9A08 /* Helper Files.swift in Sources */,
+				9D2A0D62227F53A600F9EC64 /* WatchViewController.swift in Sources */,
 				9D6580EC226159D7003F9A08 /* CoachViewController.swift in Sources */,
+				9D2A0D66227F543500F9EC64 /* PlayerViewClass copy.swift in Sources */,
+				9D2A0D60227E682200F9EC64 /* PlanViewController.swift in Sources */,
 				9D0A9EBF226EAFAE00CA0787 /* BrowseViewController.swift in Sources */,
 				9D310BA22272BF0200C617B3 /* OverviewViewController.swift in Sources */,
 				9DA3BDB12263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */,
@@ -629,8 +669,10 @@
 				9D65810B226159EE003F9A08 /* Message.swift in Sources */,
 				9D658123226159F7003F9A08 /* WelcomeVC.swift in Sources */,
 				9D1581EA227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */,
+				9D1BD324227F6C11009B5039 /* CompletedViewController.swift in Sources */,
 				9DD9B256226C12C7009121C7 /* HomePageViewController.swift in Sources */,
 				9D658105226159EE003F9A08 /* User.swift in Sources */,
+				9D2F9F35227E13B20057049E /* PurchasesViewController.swift in Sources */,
 				9D6580F8226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
 				9D40C7D92262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
 			);
@@ -646,11 +688,13 @@
 				9D6580F0226159D7003F9A08 /* AccountTableViewCell.swift in Sources */,
 				9D658121226159F7003F9A08 /* VCCells.swift in Sources */,
 				9D658118226159F7003F9A08 /* ConversationsVC.swift in Sources */,
+				9D2A0D67227F543500F9EC64 /* PlayerViewClass copy.swift in Sources */,
 				9D6580F3226159D7003F9A08 /* HomeTabViewController.swift in Sources */,
 				9D6580F9226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
 				9D1581EB227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */,
 				9DA3BDB22263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */,
 				9D6580F6226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
+				9D2F9F36227E13B20057049E /* PurchasesViewController.swift in Sources */,
 				9D658106226159EE003F9A08 /* User.swift in Sources */,
 				9D40C7DA2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
 				9D65810C226159EE003F9A08 /* Message.swift in Sources */,
@@ -658,6 +702,7 @@
 				9D1581E7227A648F009DABF8 /* SignUpViewController.swift in Sources */,
 				9D6580C222615905003F9A08 /* DMTests.swift in Sources */,
 				9D6580ED226159D7003F9A08 /* CoachViewController.swift in Sources */,
+				9D2A0D63227F53A600F9EC64 /* WatchViewController.swift in Sources */,
 				9D658124226159F7003F9A08 /* WelcomeVC.swift in Sources */,
 				9D658109226159EE003F9A08 /* Conversation.swift in Sources */,
 				9D6580FC226159D7003F9A08 /* AccountOverviewViewController.swift in Sources */,
@@ -674,11 +719,13 @@
 				9D6580F1226159D7003F9A08 /* AccountTableViewCell.swift in Sources */,
 				9D658122226159F7003F9A08 /* VCCells.swift in Sources */,
 				9D658119226159F7003F9A08 /* ConversationsVC.swift in Sources */,
+				9D2A0D68227F543500F9EC64 /* PlayerViewClass copy.swift in Sources */,
 				9D6580F4226159D7003F9A08 /* HomeTabViewController.swift in Sources */,
 				9D6580FA226159D7003F9A08 /* BuyNowViewController.swift in Sources */,
 				9D1581EC227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */,
 				9DA3BDB32263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */,
 				9D6580F7226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
+				9D2F9F37227E13B20057049E /* PurchasesViewController.swift in Sources */,
 				9D658107226159EE003F9A08 /* User.swift in Sources */,
 				9D40C7DB2262E3AE0064BBC4 /* PeopleCollectionViewCell.swift in Sources */,
 				9D65810D226159EE003F9A08 /* Message.swift in Sources */,
@@ -686,6 +733,7 @@
 				9D1581E8227A648F009DABF8 /* SignUpViewController.swift in Sources */,
 				9D6580CD22615905003F9A08 /* DMUITests.swift in Sources */,
 				9D6580EE226159D7003F9A08 /* CoachViewController.swift in Sources */,
+				9D2A0D64227F53A700F9EC64 /* WatchViewController.swift in Sources */,
 				9D658125226159F7003F9A08 /* WelcomeVC.swift in Sources */,
 				9D65810A226159EE003F9A08 /* Conversation.swift in Sources */,
 				9D6580FD226159D7003F9A08 /* AccountOverviewViewController.swift in Sources */,
@@ -839,7 +887,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC46100BE80406C9BBF2C08B /* Pods-DM.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-13";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-19";
 				CODE_SIGN_ENTITLEMENTS = DM/DM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;
@@ -859,7 +907,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9E5D3230B948057F23F88766 /* Pods-DM.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-13";
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-19";
 				CODE_SIGN_ENTITLEMENTS = DM/DM.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 797Q3HJ5U5;

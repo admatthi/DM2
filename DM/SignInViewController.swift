@@ -87,6 +87,8 @@ class SignInViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ref = Database.database().reference()
+
         passwordtf.layer.cornerRadius = 2.0
         emailtf.layer.cornerRadius = 2.0
         

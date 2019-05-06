@@ -110,13 +110,13 @@ class ConversationsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     
     //Show EmailVerification on the bottom
     @objc func showEmailAlert() {
-        User.checkUserVerification {[weak weakSelf = self] (status) in
-            status == true ? (weakSelf?.alertBottomConstraint.constant = -40) : (weakSelf?.alertBottomConstraint.constant = 0)
-            UIView.animate(withDuration: 0.3) {
-                weakSelf?.view.layoutIfNeeded()
-                weakSelf = nil
-            }
-        }
+//        User.checkUserVerification {[weak weakSelf = self] (status) in
+//            status == true ? (weakSelf?.alertBottomConstraint.constant = -40) : (weakSelf?.alertBottomConstraint.constant = 0)
+//            UIView.animate(withDuration: 0.3) {
+//                weakSelf?.view.layoutIfNeeded()
+//                weakSelf = nil
+//            }
+//        }
     }
     
     //Shows Chat viewcontroller with given user
@@ -196,7 +196,7 @@ class ConversationsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
                 cell.nameLabel.font = UIFont(name:"AvenirNext-DemiBold", size: 17.0)
                 cell.messageLabel.font = UIFont(name:"AvenirNext-DemiBold", size: 14.0)
                 cell.timeLabel.font = UIFont(name:"AvenirNext-DemiBold", size: 13.0)
-                cell.profilePic.layer.borderColor = GlobalVariables.blue.cgColor
+//                cell.profilePic.layer.borderColor = GlobalVariables.blue.cgColor
                 cell.messageLabel.textColor = GlobalVariables.purple
             }
             return cell

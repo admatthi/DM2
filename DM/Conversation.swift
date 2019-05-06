@@ -46,7 +46,7 @@ class Conversation {
                     
 //                    var user3 = ["name": "Alex2", "email": "ajsdf@gamil.com"]
                     
-                    let conversation = Conversation.init(user: User.init(name: "Alex2", email: "no@gmail.com", id: fromID, profilePic: UIImage(named: "Shit")!), lastMessage: emptyMessage)
+                    let conversation = Conversation.init(user: User.init(name: "Alek", email: "no@gmail.com", id: fromID, profilePic: UIImage(named: "892")!), lastMessage: emptyMessage)
                     
                     
                     conversations.append(conversation)

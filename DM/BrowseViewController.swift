@@ -14,22 +14,42 @@ import FirebaseCore
 var peopleimages = [String:UIImage]()
 var peopleids = [String]()
 var peoplenames = [String:String]()
+var responsetimes = [String:String]()
+var ages = [String:String]()
+var selectedtime = String()
+var selectedage = String()
 var selectedname2 = String()
+var heights = [String:String]()
+var hometowns = [String:String]()
+var bios = [String:String]()
+var selectedheight = String()
+var selectedbio = String()
+var selectedhometown = String()
+var prices = [String:String]()
+var selectedplanid = String()
+
 class BrowseViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         
-        selectedname2 = peoplenames[peopleids[indexPath.row]]!
+        selectedtitle = "Day \(indexPath.row+1)"
         
-        selectedimage = peopleimages[peopleids[indexPath.row]]!
+        selecteddayid = "Day \(indexPath.row+1)"
         
+        if indexPath.row > 4 {
+            
+            selecteddayid = "Day 2"
+        }
         
-        self.performSegue(withIdentifier: "BrowseToProfiles", sender: self)
+        selectedplanid = selectedmusclegroup
+        
+        self.performSegue(withIdentifier: "BrowseToWatch", sender: self)
+        
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return peopleimages.count
+        return 28
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -41,12 +61,23 @@ class BrowseViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         cell.layer.cornerRadius = 5.0
         cell.layer.masksToBounds = true
-        cell.peopleimage.image = peopleimages[peopleids[indexPath.row]]
-        cell.namelabel.text = peoplenames[peopleids[indexPath.row]]
+//        cell.peopleimage.image = peopleimages[peopleids[indexPath.row]]
+//        cell.namelabel.text = "\(peoplenames[peopleids[indexPath.row]]!), \(ages[peopleids[indexPath.row]]!)"
+        
+        
+//        cell.namelabel.text = "\(peoplenames[peopleids[indexPath.row]]!)"
+        cell.namelabel.text = "Day \(indexPath.row+1)"
+
+        cell.headline.text = "Day \(indexPath.row+1)"
+        
+        
+//        cell.responsetime.text = responsetimes[peopleids[indexPath.row]]
+        cell.responsetime.text = times[indexPath.row]
         
         return cell
     }
     
+    var times = [String]()
     func queryforids(completed: @escaping (() -> ()) ) {
         
         collectionView.alpha = 1
@@ -55,9 +86,15 @@ class BrowseViewController: UIViewController, UICollectionViewDelegate, UICollec
         
         peopleids.removeAll()
         peopleimages.removeAll()
+        responsetimes.removeAll()
+        ages.removeAll()
+        heights.removeAll()
+        hometowns.removeAll()
+        bios.removeAll()
+        prices.removeAll()
         
         
-        ref?.child("People").observeSingleEvent(of: .value, with: { (snapshot) in
+        ref?.child("Plans").child(selectedmusclegroup).observeSingleEvent(of: .value, with: { (snapshot) in
             
             var value = snapshot.value as? NSDictionary
             
@@ -84,15 +121,79 @@ class BrowseViewController: UIViewController, UICollectionViewDelegate, UICollec
         })
     }
     
+    @IBOutlet weak var planlabel: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    func createvalues() {
+        
+        var selectedplanboom = String()
+        
+        selectedplanboom = "Shoulder"
+        
+        var i = 1
+        
+        while i < 29 {
+            
+        
+        ref?.child("Plans").child(selectedplanboom).child("Day \(i)").childByAutoId().updateChildValues(["URL" : "x"])
+        
+       ref?.child("Plans").child(selectedplanboom).child("Day \(i)").childByAutoId().updateChildValues(["URL" : "x"])
+            
+    ref?.child("Plans").child(selectedplanboom).child("Day \(i)").childByAutoId().updateChildValues(["URL" : "x"])
+            
+            i += 1
+        }
+        
+        
+        
+        
+
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         ref = Database.database().reference()
 
+//    createvalues()
+        times.removeAll()
+        times.append("12 mins")
+        times.append("12 mins")
+        times.append("12 mins")
+        times.append("12 mins")
+        times.append("12 mins")
+        times.append("12 mins")
+        times.append("12 mins")
+        times.append("15 mins")
         
+         times.append("15 mins")
+         times.append("15 mins")
+         times.append("15 mins")
+         times.append("15 mins")
+         times.append("15 mins")
+         times.append("15 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        times.append("20 mins")
+        if selectedmusclegroup != "" {
+            
+            planlabel.text = selectedmusclegroup
+
+        } else {
+            
+            selectedmusclegroup = "Wrist"
+        }
         
         var screenSize = collectionView.bounds
         var screenWidth = screenSize.width
@@ -104,14 +205,16 @@ class BrowseViewController: UIViewController, UICollectionViewDelegate, UICollec
         layout.minimumInteritemSpacing = 0
         layout.minimumLineSpacing = 0
         
+        collectionView.layer.cornerRadius = 5.0
+        collectionView.clipsToBounds = true
         collectionView!.collectionViewLayout = layout
         
-        queryforids { () -> () in
-            
-            self.queryforreviewinfo()
-            
-        }
-        
+//        queryforids { () -> () in
+//
+//            self.queryforreviewinfo()
+//
+//        }
+//
         
         
     }
@@ -123,7 +226,7 @@ class BrowseViewController: UIViewController, UICollectionViewDelegate, UICollec
         for each in peopleids {
             
             
-            ref?.child("People").child(each).observeSingleEvent(of: .value, with: { (snapshot) in
+        ref?.child("Plans").child(selectedmusclegroup).child(each).observeSingleEvent(of: .value, with: { (snapshot) in
                 
                 var value = snapshot.value as? NSDictionary
                 
@@ -136,7 +239,7 @@ class BrowseViewController: UIViewController, UICollectionViewDelegate, UICollec
                 }
                 
                 
-                            if var productimagee = value?["Image"] as? String {
+            if var productimagee = value?["Image"] as? String {
                 
                 
                                 if productimagee.hasPrefix("http://") || productimagee.hasPrefix("https://") {

@@ -15,9 +15,9 @@ class HomeTabViewController: UITabBarController {
 
 //        self.tabBar.frame = CGRect(origin: CGPoint(x: 0,y :64), size: CGSize(width: 400, height: 50))
 //
-//        self.tabBar.layer.borderWidth = 0.0
-//        self.tabBar.layer.borderColor = UIColor.clear.cgColor
-//        self.tabBar.clipsToBounds = true
+        self.tabBar.layer.borderWidth = 0.0
+        self.tabBar.layer.borderColor = UIColor.clear.cgColor
+        self.tabBar.clipsToBounds = true
 //        self.tabBar.itemSpacing = 1000
     
         
