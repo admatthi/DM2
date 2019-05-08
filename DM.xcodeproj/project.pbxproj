@@ -22,7 +22,14 @@
 		9D1581EA227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */; };
 		9D1581EB227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */; };
 		9D1581EC227A6508009DABF8 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */; };
+		9D1B36B222826340001E9FA8 /* AViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B36B122826340001E9FA8 /* AViewController.swift */; };
+		9D1B36B42282635D001E9FA8 /* BViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B36B32282635D001E9FA8 /* BViewController.swift */; };
+		9D1B36B62282636A001E9FA8 /* CViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B36B52282636A001E9FA8 /* CViewController.swift */; };
+		9D1B36B822826377001E9FA8 /* DViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B36B722826377001E9FA8 /* DViewController.swift */; };
+		9D1B36BA22826384001E9FA8 /* EViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B36B922826384001E9FA8 /* EViewController.swift */; };
+		9D1B36BC22826391001E9FA8 /* FViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1B36BB22826391001E9FA8 /* FViewController.swift */; };
 		9D1BD324227F6C11009B5039 /* CompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D1BD323227F6C11009B5039 /* CompletedViewController.swift */; };
+		9D296A44227FBE9A003E64DF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D296A43227FBE9A003E64DF /* SettingsViewController.swift */; };
 		9D2A0D60227E682200F9EC64 /* PlanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D5F227E682200F9EC64 /* PlanViewController.swift */; };
 		9D2A0D62227F53A600F9EC64 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */; };
 		9D2A0D63227F53A600F9EC64 /* WatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */; };
@@ -147,7 +154,14 @@
 		9D1581E3227A645E009DABF8 /* ProfilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesViewController.swift; sourceTree = "<group>"; };
 		9D1581E5227A648E009DABF8 /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesTableViewCell.swift; sourceTree = "<group>"; };
+		9D1B36B122826340001E9FA8 /* AViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AViewController.swift; sourceTree = "<group>"; };
+		9D1B36B32282635D001E9FA8 /* BViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BViewController.swift; sourceTree = "<group>"; };
+		9D1B36B52282636A001E9FA8 /* CViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CViewController.swift; sourceTree = "<group>"; };
+		9D1B36B722826377001E9FA8 /* DViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DViewController.swift; sourceTree = "<group>"; };
+		9D1B36B922826384001E9FA8 /* EViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EViewController.swift; sourceTree = "<group>"; };
+		9D1B36BB22826391001E9FA8 /* FViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FViewController.swift; sourceTree = "<group>"; };
 		9D1BD323227F6C11009B5039 /* CompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedViewController.swift; sourceTree = "<group>"; };
+		9D296A43227FBE9A003E64DF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9D2A0D5F227E682200F9EC64 /* PlanViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanViewController.swift; sourceTree = "<group>"; };
 		9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchViewController.swift; sourceTree = "<group>"; };
 		9D2A0D65227F543400F9EC64 /* PlayerViewClass copy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PlayerViewClass copy.swift"; sourceTree = "<group>"; };
@@ -250,7 +264,6 @@
 				9D1581E3227A645E009DABF8 /* ProfilesViewController.swift */,
 				9D1581E9227A6508009DABF8 /* ProfilesTableViewCell.swift */,
 				9D0A9EC0226EB02B00CA0787 /* People2CollectionViewCell.swift */,
-				9D658110226159F6003F9A08 /* ChatVC.swift */,
 			);
 			path = DM;
 			sourceTree = "<group>";
@@ -307,6 +320,7 @@
 				9D6580AE226158FF003F9A08 /* ViewController.swift */,
 				9D41045C227DE64C006D33BD /* New Group2 */,
 				9D310BA12272BF0100C617B3 /* OverviewViewController.swift */,
+				9D296A43227FBE9A003E64DF /* SettingsViewController.swift */,
 				9D1BD323227F6C11009B5039 /* CompletedViewController.swift */,
 				9D0A9EBE226EAFAE00CA0787 /* BrowseViewController.swift */,
 				9D2A0D61227F53A600F9EC64 /* WatchViewController.swift */,
@@ -315,8 +329,16 @@
 				9D310BA722739A9C00C617B3 /* SignUpBuyerViewController.swift */,
 				9D40C7C522619BE80064BBC4 /* SignInViewController.swift */,
 				9D65810F226159F6003F9A08 /* ConversationsVC.swift */,
+				9D658103226159ED003F9A08 /* Conversation.swift */,
 				9D2A0D65227F543400F9EC64 /* PlayerViewClass copy.swift */,
 				9D0A9EC2226EB49F00CA0787 /* PersonsCollectionViewCell.swift */,
+				9D658110226159F6003F9A08 /* ChatVC.swift */,
+				9D1B36B122826340001E9FA8 /* AViewController.swift */,
+				9D1B36B32282635D001E9FA8 /* BViewController.swift */,
+				9D1B36B52282636A001E9FA8 /* CViewController.swift */,
+				9D1B36B722826377001E9FA8 /* DViewController.swift */,
+				9D1B36B922826384001E9FA8 /* EViewController.swift */,
+				9D1B36BB22826391001E9FA8 /* FViewController.swift */,
 				9D65812622615A04003F9A08 /* Main.storyboard */,
 				9D0A9EBD226EAF9D00CA0787 /* DM */,
 				9DD9B254226C12A9009121C7 /* New Group1 */,
@@ -333,7 +355,6 @@
 				9D6580EA226159D6003F9A08 /* BuyNowViewController.swift */,
 				9D6580E8226159D6003F9A08 /* HomeTabViewController.swift */,
 				9D6580FE226159E4003F9A08 /* Helper Files.swift */,
-				9D658103226159ED003F9A08 /* Conversation.swift */,
 				9D658104226159ED003F9A08 /* Message.swift */,
 				9D658102226159ED003F9A08 /* User.swift */,
 				9D40C7C322619BDE0064BBC4 /* RegisterViewController.swift */,
@@ -643,7 +664,10 @@
 				9D6580FB226159D7003F9A08 /* AccountOverviewViewController.swift in Sources */,
 				9D40C7C422619BDE0064BBC4 /* RegisterViewController.swift in Sources */,
 				9DD9B25A226C142E009121C7 /* CategoriesCollectionViewCell.swift in Sources */,
+				9D1B36B822826377001E9FA8 /* DViewController.swift in Sources */,
+				9D1B36B42282635D001E9FA8 /* BViewController.swift in Sources */,
 				9D6580EF226159D7003F9A08 /* AccountTableViewCell.swift in Sources */,
+				9D1B36BA22826384001E9FA8 /* EViewController.swift in Sources */,
 				9D6580F5226159D7003F9A08 /* CoachTableViewCell.swift in Sources */,
 				9DD9B258226C1419009121C7 /* LessonTableViewCell.swift in Sources */,
 				9D0A9EC3226EB49F00CA0787 /* PersonsCollectionViewCell.swift in Sources */,
@@ -655,10 +679,14 @@
 				9D2A0D62227F53A600F9EC64 /* WatchViewController.swift in Sources */,
 				9D6580EC226159D7003F9A08 /* CoachViewController.swift in Sources */,
 				9D2A0D66227F543500F9EC64 /* PlayerViewClass copy.swift in Sources */,
+				9D1B36B62282636A001E9FA8 /* CViewController.swift in Sources */,
 				9D2A0D60227E682200F9EC64 /* PlanViewController.swift in Sources */,
 				9D0A9EBF226EAFAE00CA0787 /* BrowseViewController.swift in Sources */,
+				9D1B36BC22826391001E9FA8 /* FViewController.swift in Sources */,
+				9D1B36B222826340001E9FA8 /* AViewController.swift in Sources */,
 				9D310BA22272BF0200C617B3 /* OverviewViewController.swift in Sources */,
 				9DA3BDB12263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */,
+				9D296A44227FBE9A003E64DF /* SettingsViewController.swift in Sources */,
 				9D0A9EC1226EB02B00CA0787 /* People2CollectionViewCell.swift in Sources */,
 				9D1581E6227A648F009DABF8 /* SignUpViewController.swift in Sources */,
 				9DA3BDAD2263E5E400C6BA7F /* StageViewController.swift in Sources */,

@@ -98,7 +98,7 @@ class PurchasesViewController: UIViewController {
     }
     @IBAction func tapTerms(_ sender: Any) {
         
-        if let url = NSURL(string: "https://getslideapp.weebly.com/terms--policy.html"
+        if let url = NSURL(string: "https://www.gethealphysicaltherapy.com/pages/terms"
             ) {
             UIApplication.shared.openURL(url as URL)
         }

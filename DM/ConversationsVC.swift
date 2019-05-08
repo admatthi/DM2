@@ -82,6 +82,8 @@ class ConversationsVC: UIViewController, UITableViewDelegate, UITableViewDataSou
         
         Conversation.showConversations { (conversations) in
             self.items = conversations
+            
+            
             self.items.sort{ $0.lastMessage.timestamp > $1.lastMessage.timestamp }
             DispatchQueue.main.async {
                 self.tableView.reloadData()

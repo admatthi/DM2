@@ -104,7 +104,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
                 } else {
                     
                     //                let content = "Hi, welcome to Help! I'm Alek, your consultation coach. I'll be explaining how Help works and guiding you through our subscription options for working with a weight loss coach here. When you're ready to start being coached, I'll help you find a coach who is best suited to your specific health needs. Would you please share your name, age, and what health concerns you would like to work on?"
-
                     
                     let content = "Hi, welcome to Heal! I'm Alek, your physical therapy coach. I'll be explaining how Heal works and guiding you throuhg our subscription options. When you're ready to start, I'll be here to make sure you have a program that best suites your needs. Would you please share what health concerns you'd like to work on?"
                     
@@ -116,9 +115,6 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
                         Database.database().reference().child("users").child(uid).child("conversations").child("rmmMbNlS5ZPoE2OPTOetUVYBWqf2").setValue(data)
                         //
                         NotificationCenter.default.post(name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
-                        //
-                        //                })
-                        self.customization()
                         
                     })
 
@@ -164,6 +160,18 @@ class ChatVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UITe
                 } else {
                     
                     
+                    let content = "Hi, welcome to Heal! I'm Alek, your physical therapy coach. I'll be explaining how Heal works and guiding you throuhg our subscription options. When you're ready to start, I'll be here to make sure you have a program that best suites your needs. Would you please share what health concerns you'd like to work on?"
+                    
+                    let values = ["type": "text", "content": content, "fromID": "rmmMbNlS5ZPoE2OPTOetUVYBWqf2", "toID": uid, "timestamp": Int(Date().timeIntervalSince1970), "isRead": false] as [String : Any]
+                    
+                    Database.database().reference().child("conversations").childByAutoId().childByAutoId().setValue(values, withCompletionBlock: { (error, reference) in
+                        let data = ["location": reference.parent!.key]
+                        Database.database().reference().child("users").child("rmmMbNlS5ZPoE2OPTOetUVYBWqf2").child("conversations").child(uid).setValue(data)
+                        Database.database().reference().child("users").child(uid).child("conversations").child("rmmMbNlS5ZPoE2OPTOetUVYBWqf2").setValue(data)
+                        //
+                        NotificationCenter.default.post(name: Notification.Name(rawValue: "disconnectPaxiSockets"), object: nil)
+                        
+                    })
                     
                 }
             }
