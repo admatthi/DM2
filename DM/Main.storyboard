@@ -469,7 +469,7 @@
                         <viewControllerLayoutGuide type="bottom" id="n9w-Gn-0xV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qPh-Fp-RNk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BlueButton" translatesAutoresizingMaskIntoConstraints="NO" id="5AE-Xf-AFF">
@@ -490,7 +490,7 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Plb-lE-iQb">
-                                <rect key="frame" x="0.0" y="80" width="375" height="538"/>
+                                <rect key="frame" x="0.0" y="80" width="375" height="587"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="xjX-CL-WpE" customClass="ConversationsTBCell" customModule="DM" customModuleProvider="target">
@@ -1356,7 +1356,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="159" height="196"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="EJD-Ep-OaZ">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle-1" translatesAutoresizingMaskIntoConstraints="NO" id="EJD-Ep-OaZ">
                                                     <rect key="frame" x="8" y="11" width="146" height="174"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="146" id="EHx-gm-Po9"/>
@@ -1376,42 +1376,72 @@
                                                     <fontDescription key="fontDescription" name="BasisGrotesquePro-Bold" family="Basis Grotesque Pro" pointSize="19"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usually 6 hours" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77a-kP-k8Z">
-                                                    <rect key="frame" x="16.5" y="157" width="126" height="20"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15m" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="77a-kP-k8Z">
+                                                    <rect key="frame" x="41" y="153" width="101" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="CE1-mi-lwy"/>
-                                                        <constraint firstAttribute="width" constant="126" id="dyN-bP-nSd"/>
+                                                        <constraint firstAttribute="height" constant="20" id="Yku-dk-jiP"/>
+                                                        <constraint firstAttribute="width" constant="101" id="oiG-IL-7Iq"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="BasisGrotesquePro-Bold" family="Basis Grotesque Pro" pointSize="10"/>
                                                     <color key="textColor" red="0.63449960949999995" green="0.64933812619999998" blue="0.74059581760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 1" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-TD-qk8">
-                                                    <rect key="frame" x="16.5" y="72" width="126" height="52"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day 1" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EdI-TD-qk8">
+                                                    <rect key="frame" x="24" y="100" width="118" height="32"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="126" id="Kza-0y-31U"/>
-                                                        <constraint firstAttribute="height" constant="52" id="v8e-Bq-hK3"/>
+                                                        <constraint firstAttribute="height" constant="32" id="F2e-KO-CSk"/>
+                                                        <constraint firstAttribute="width" constant="118" id="dSW-Dp-PcL"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="BasisGrotesquePro-Bold" family="Basis Grotesque Pro" pointSize="24"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clock" translatesAutoresizingMaskIntoConstraints="NO" id="XfJ-OU-2I3">
+                                                    <rect key="frame" x="19" y="152" width="22" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="22" id="PCx-uB-htd"/>
+                                                        <constraint firstAttribute="height" constant="22" id="cnk-Yk-ucQ"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medium" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aIw-kH-Q10">
+                                                    <rect key="frame" x="41" y="135" width="101" height="20"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="101" id="Nwf-B6-JZI"/>
+                                                        <constraint firstAttribute="height" constant="20" id="U9Z-J9-awp"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BasisGrotesquePro-Bold" family="Basis Grotesque Pro" pointSize="10"/>
+                                                    <color key="textColor" red="0.63449960949999995" green="0.64933812619999998" blue="0.74059581760000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Graph" translatesAutoresizingMaskIntoConstraints="NO" id="JvT-0l-iDe">
+                                                    <rect key="frame" x="22" y="137" width="16" height="16"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="16" id="Vmn-Pr-HXL"/>
+                                                        <constraint firstAttribute="height" constant="16" id="xeH-FA-Sh6"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="7Wf-VE-SGZ" firstAttribute="top" secondItem="EdI-TD-qk8" secondAttribute="bottom" constant="1" id="2p8-X7-UFm"/>
                                             <constraint firstAttribute="trailing" secondItem="q4X-f2-gVo" secondAttribute="trailing" constant="5" id="2qK-XZ-Xpz"/>
+                                            <constraint firstItem="77a-kP-k8Z" firstAttribute="leading" secondItem="XfJ-OU-2I3" secondAttribute="trailing" id="6qO-Vl-5mw"/>
                                             <constraint firstAttribute="trailing" secondItem="EJD-Ep-OaZ" secondAttribute="trailing" constant="5" id="AIc-kK-TBR"/>
                                             <constraint firstAttribute="bottom" secondItem="q4X-f2-gVo" secondAttribute="bottom" constant="8" id="Go7-vw-goz"/>
-                                            <constraint firstItem="EdI-TD-qk8" firstAttribute="centerX" secondItem="gPg-2W-hX9" secondAttribute="centerX" id="Too-rb-FqK"/>
-                                            <constraint firstItem="EdI-TD-qk8" firstAttribute="centerY" secondItem="gPg-2W-hX9" secondAttribute="centerY" id="UoZ-I1-0pV"/>
+                                            <constraint firstItem="EdI-TD-qk8" firstAttribute="leading" secondItem="gPg-2W-hX9" secondAttribute="leading" constant="24" id="KMC-Ed-dsS"/>
+                                            <constraint firstAttribute="bottom" secondItem="aIw-kH-Q10" secondAttribute="bottom" constant="41" id="M66-jz-Bhj"/>
+                                            <constraint firstItem="aIw-kH-Q10" firstAttribute="leading" secondItem="77a-kP-k8Z" secondAttribute="trailing" constant="-101" id="MMs-gT-T2L"/>
+                                            <constraint firstItem="77a-kP-k8Z" firstAttribute="leading" secondItem="gPg-2W-hX9" secondAttribute="leading" constant="41" id="Uw8-rJ-IJr"/>
                                             <constraint firstAttribute="bottom" secondItem="7Wf-VE-SGZ" secondAttribute="bottom" constant="40" id="amT-8G-N8n"/>
+                                            <constraint firstItem="XfJ-OU-2I3" firstAttribute="centerY" secondItem="77a-kP-k8Z" secondAttribute="centerY" id="cE2-Ci-dyH"/>
                                             <constraint firstItem="q4X-f2-gVo" firstAttribute="top" secondItem="gPg-2W-hX9" secondAttribute="top" constant="123" id="cyY-H9-D3Z"/>
                                             <constraint firstItem="EJD-Ep-OaZ" firstAttribute="leading" secondItem="gPg-2W-hX9" secondAttribute="leading" constant="8" id="eBH-7F-IWI"/>
-                                            <constraint firstItem="77a-kP-k8Z" firstAttribute="centerX" secondItem="gPg-2W-hX9" secondAttribute="centerX" id="fee-uu-SCg"/>
+                                            <constraint firstAttribute="bottom" secondItem="77a-kP-k8Z" secondAttribute="bottom" constant="23" id="i6h-Ha-wch"/>
                                             <constraint firstItem="7Wf-VE-SGZ" firstAttribute="leading" secondItem="gPg-2W-hX9" secondAttribute="leading" constant="25" id="nNC-do-LFS"/>
+                                            <constraint firstItem="aIw-kH-Q10" firstAttribute="leading" secondItem="JvT-0l-iDe" secondAttribute="trailing" constant="3" id="rTw-jr-hN9"/>
                                             <constraint firstItem="EJD-Ep-OaZ" firstAttribute="top" secondItem="gPg-2W-hX9" secondAttribute="top" constant="11" id="tyZ-O7-qwh"/>
-                                            <constraint firstItem="77a-kP-k8Z" firstAttribute="top" secondItem="EdI-TD-qk8" secondAttribute="bottom" constant="33" id="vST-kT-Wpm"/>
                                             <constraint firstItem="q4X-f2-gVo" firstAttribute="leading" secondItem="gPg-2W-hX9" secondAttribute="leading" constant="8" id="wdN-Uv-68f"/>
                                             <constraint firstAttribute="bottom" secondItem="EJD-Ep-OaZ" secondAttribute="bottom" constant="11" id="yiZ-EB-7di"/>
+                                            <constraint firstItem="JvT-0l-iDe" firstAttribute="centerY" secondItem="aIw-kH-Q10" secondAttribute="centerY" id="zXe-Tv-DTJ"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="headline" destination="EdI-TD-qk8" id="oYH-f9-H5e"/>
@@ -3558,7 +3588,7 @@
             <objects>
                 <viewController id="6mv-va-EZh" customClass="AccountOverviewViewController" customModule="DM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ac-mw-ppc">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1151"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1200"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle" translatesAutoresizingMaskIntoConstraints="NO" id="1y3-gO-tJb">
@@ -3582,7 +3612,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="u1I-L6-Qgr">
-                                <rect key="frame" x="0.0" y="81" width="375" height="1070"/>
+                                <rect key="frame" x="0.0" y="81" width="375" height="1119"/>
                                 <color key="backgroundColor" red="0.96470588239999999" green="0.97254901959999995" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="separatorColor" red="0.97227032229999999" green="0.97920274169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.97227032229999999" green="0.97920274169999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -4398,11 +4428,11 @@
         <scene sceneID="RcZ-aK-QEl">
             <objects>
                 <viewController id="Kra-bI-cgA" customClass="PurchaseIAPViewController" customModule="DM" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="kF1-xp-jh1">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                    <view key="view" contentMode="scaleToFill" id="kF1-xp-jh1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvV-KI-ysD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NvV-KI-ysD">
                                 <rect key="frame" x="32" y="534" width="311" height="160"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="311" id="PyX-ON-G9D"/>
@@ -4511,7 +4541,7 @@
                                     <action selector="tapRestore:" destination="Kra-bI-cgA" eventType="touchUpInside" id="Kck-26-jFI"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-tj-ZYl">
+                            <button opaque="NO" alpha="0.75" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JQG-tj-ZYl">
                                 <rect key="frame" x="19" y="546" width="337" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="337" id="chc-5B-Lhy"/>
@@ -5396,11 +5426,11 @@
             <objects>
                 <viewController storyboardIdentifier="Intake" title="Intake" id="nu7-y2-1EC" customClass="StageViewController" customModule="DM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qJT-yS-QOY">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35z-MO-4wL">
-                                <rect key="frame" x="9" y="124" width="357" height="475"/>
+                                <rect key="frame" x="9" y="124" width="357" height="524"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -5431,7 +5461,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zdg-od-5ZC">
-                                <rect key="frame" x="16" y="141" width="343" height="457"/>
+                                <rect key="frame" x="16" y="141" width="343" height="506"/>
                                 <string key="text">Metrics that matter
 Cut through the noise to drive change where it matters most. Humu propels behaviors that are validated to improve happiness, productivity, and retention.
 
@@ -5781,7 +5811,7 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
             <objects>
                 <viewController storyboardIdentifier="Register" title="Register" id="O5c-e5-E6b" customClass="RegisterViewController" customModule="DM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PYi-QX-QjK">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AHN-MH-QjO">
@@ -5863,7 +5893,7 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Rc-BX-42D">
-                                <rect key="frame" x="0.0" y="518" width="375" height="100"/>
+                                <rect key="frame" x="0.0" y="567" width="375" height="100"/>
                                 <color key="backgroundColor" red="0.019607843140000001" green="0.23921568630000001" blue="0.35686274509999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="pla-UH-KFc"/>
@@ -6077,11 +6107,13 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
         <image name="Chat" width="50" height="50"/>
         <image name="Chat Copy" width="50" height="50"/>
         <image name="Chat2" width="50" height="50"/>
+        <image name="Clock" width="50" height="50"/>
         <image name="Eyeball" width="60" height="60"/>
         <image name="Eyeball Copy" width="60" height="60"/>
         <image name="Eyeball Copy 2" width="60" height="60"/>
         <image name="FilterW" width="60" height="60"/>
         <image name="Forward" width="60" height="60"/>
+        <image name="Graph" width="50" height="50"/>
         <image name="GreenBlue3" width="16" height="16"/>
         <image name="Hamburger" width="50" height="50"/>
         <image name="Home2" width="50" height="50"/>
@@ -6116,22 +6148,22 @@ Cultural transformation doesn’t happen on a business plan. Humu adapts over ti
         <image name="selectMessage" width="32" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="LBb-6d-Js6"/>
+        <segue reference="ggA-sI-pBM"/>
         <segue reference="zSn-bw-wf7"/>
         <segue reference="qnt-Kb-cNb"/>
-        <segue reference="5hF-do-nbA"/>
-        <segue reference="uiY-bF-Ylj"/>
-        <segue reference="gWR-n8-Ayy"/>
-        <segue reference="JBK-80-lGc"/>
-        <segue reference="djr-b9-sKi"/>
+        <segue reference="8Ub-Kd-Cby"/>
+        <segue reference="ndF-Ad-Ok1"/>
+        <segue reference="DfZ-6p-zF9"/>
+        <segue reference="kq3-s2-j7U"/>
+        <segue reference="Dic-9A-lJT"/>
         <segue reference="rPK-5I-Ii9"/>
         <segue reference="zap-xf-0tZ"/>
         <segue reference="CMd-ND-4Ar"/>
-        <segue reference="vOH-ut-qoN"/>
+        <segue reference="1fp-bj-Fgn"/>
         <segue reference="ZTi-RY-sZc"/>
-        <segue reference="6qz-jo-mz5"/>
+        <segue reference="Cym-wm-eua"/>
         <segue reference="dx9-9a-ph2"/>
-        <segue reference="P3r-5v-K0b"/>
-        <segue reference="UsW-n1-fth"/>
+        <segue reference="AiO-xk-36D"/>
+        <segue reference="KpM-Kk-Eed"/>
     </inferredMetricsTieBreakers>
 </document>
