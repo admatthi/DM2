@@ -13,9 +13,15 @@ class BViewController: UIViewController, UITextFieldDelegate     {
     @IBOutlet weak var tf: UITextField!
     @IBAction func tapContinue(_ sender: Any) {
         
+        if tf.text != "" {
+            
+            myage = tf.text!
+        }
+        
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
         
+        self.performSegue(withIdentifier: "Path3", sender: self)
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -30,6 +36,16 @@ class BViewController: UIViewController, UITextFieldDelegate     {
         tapcontinue.layer.cornerRadius = 10.0
         tapcontinue.layer.masksToBounds = true
         // Do any additional setup after loading the view.
+        tf.delegate = self
+    }
+
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        //textField code
+        self.view.endEditing(true)
+        
+        
+        return true
     }
 
     /*

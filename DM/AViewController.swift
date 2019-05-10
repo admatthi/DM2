@@ -8,6 +8,7 @@
 
 import UIKit
 
+var myage = String()
 class AViewController: UIViewController, UITextFieldDelegate {
 
     var b1pressed = Bool()
@@ -17,10 +18,28 @@ class AViewController: UIViewController, UITextFieldDelegate {
     
     @IBAction func tapContinue(_ sender: Any) {
         
+        if tf.text != "" {
+            
+            myname = tf.text!
+        }
         let generator = UIImpactFeedbackGenerator(style: .heavy)
         generator.impactOccurred()
         
+        
+        self.performSegue(withIdentifier: "Path2", sender: self)
+        
+        
     }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        
+        //textField code
+        self.view.endEditing(true)
+        
+        
+        return true
+    }
+
     @IBOutlet weak var tf: UITextField!
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
@@ -31,6 +50,7 @@ class AViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tf.delegate = self
         tapcontinue.layer.cornerRadius = 10.0
         tapcontinue.layer.masksToBounds = true
         tf.becomeFirstResponder()

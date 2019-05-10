@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00219C1F5E9AB82AF7C9DB01 /* Pods_DM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25007C40C7873D9A11AC5445 /* Pods_DM.framework */; };
 		3B75D06EF5B1052778DC2513 /* Pods_DMUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 069780B2711152F7205CF04F /* Pods_DMUITests.framework */; };
+		9D0484832284EF7A001DB44D /* GViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0484822284EF7A001DB44D /* GViewController.swift */; };
 		9D0A9EBF226EAFAE00CA0787 /* BrowseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A9EBE226EAFAE00CA0787 /* BrowseViewController.swift */; };
 		9D0A9EC1226EB02B00CA0787 /* People2CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A9EC0226EB02B00CA0787 /* People2CollectionViewCell.swift */; };
 		9D0A9EC3226EB49F00CA0787 /* PersonsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D0A9EC2226EB49F00CA0787 /* PersonsCollectionViewCell.swift */; };
@@ -147,6 +148,7 @@
 		48200AEE3616E0F688A0DABA /* Pods-DMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DMTests/Pods-DMTests.release.xcconfig"; sourceTree = "<group>"; };
 		8EB1C91B7A6294A2F1577FD6 /* Pods-DMUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMUITests/Pods-DMUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		920B5B9FBE845DFD368B27D5 /* Pods-DMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DMTests/Pods-DMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9D0484822284EF7A001DB44D /* GViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GViewController.swift; sourceTree = "<group>"; };
 		9D0A9EBE226EAFAE00CA0787 /* BrowseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowseViewController.swift; sourceTree = "<group>"; };
 		9D0A9EC0226EB02B00CA0787 /* People2CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = People2CollectionViewCell.swift; sourceTree = "<group>"; };
 		9D0A9EC2226EB49F00CA0787 /* PersonsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 				9D1B36B722826377001E9FA8 /* DViewController.swift */,
 				9D1B36B922826384001E9FA8 /* EViewController.swift */,
 				9D1B36BB22826391001E9FA8 /* FViewController.swift */,
+				9D0484822284EF7A001DB44D /* GViewController.swift */,
 				9D65812622615A04003F9A08 /* Main.storyboard */,
 				9D0A9EBD226EAF9D00CA0787 /* DM */,
 				9DD9B254226C12A9009121C7 /* New Group1 */,
@@ -685,6 +688,7 @@
 				9D1B36BC22826391001E9FA8 /* FViewController.swift in Sources */,
 				9D1B36B222826340001E9FA8 /* AViewController.swift in Sources */,
 				9D310BA22272BF0200C617B3 /* OverviewViewController.swift in Sources */,
+				9D0484832284EF7A001DB44D /* GViewController.swift in Sources */,
 				9DA3BDB12263F2F100C6BA7F /* PurchaseIAPViewController.swift in Sources */,
 				9D296A44227FBE9A003E64DF /* SettingsViewController.swift in Sources */,
 				9D0A9EC1226EB02B00CA0787 /* People2CollectionViewCell.swift in Sources */,
