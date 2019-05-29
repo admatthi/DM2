@@ -88,6 +88,7 @@ PODS:
   - GoogleUtilities/UserDefaults (5.7.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.1)
+  - IQKeyboardManager (6.2.1)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -104,6 +105,7 @@ DEPENDENCIES:
   - Firebase/Database
   - Firebase/Messaging
   - Firebase/Storage
+  - IQKeyboardManager
   - Purchases
 
 SPEC REPOS:
@@ -123,6 +125,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
+    - IQKeyboardManager
     - leveldb-library
     - nanopb
     - Protobuf
@@ -144,11 +147,12 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: ffe513e90551844a739e7bcbb1d2aca1c28a4338
   GoogleUtilities: 273e67030e0de313e7304f6dcfa96fc5214f6c23
   GTMSessionFetcher: 32aeca0aa144acea523e1c8e053089dec2cb98ca
+  IQKeyboardManager: 964638372b4a61892cc74fdfa6fd26de8c9464a2
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 7a877b7f3e5964e3fce995e2eb323dbc6831bb5a
   Purchases: 5872deac180c12fdf5e6578c9567bc0047f8a695
 
-PODFILE CHECKSUM: e7c46b8bdbab09d842fcf418fad3db4883f5a165
+PODFILE CHECKSUM: b85c8dc1d8da2e51be41513fb5371aba01bd6b6f
 
 COCOAPODS: 1.6.1

@@ -13,6 +13,7 @@ pod 'FBSDKCoreKit'
 pod 'Purchases'
 pod 'Firebase/Messaging'
 pod 'Purchases'
+pod 'IQKeyboardManager'
 
 
   # Pods for DM

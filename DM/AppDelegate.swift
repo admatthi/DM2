@@ -12,7 +12,7 @@ import Purchases
 import FirebaseMessaging
 import UserNotifications
 import FirebaseAuth
-
+import IQKeyboardManager
 protocol SnippetsPurchasesDelegate: AnyObject {
     
     func purchaseCompleted(product: String)

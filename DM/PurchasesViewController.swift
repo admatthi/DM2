@@ -111,7 +111,7 @@ class PurchasesViewController: UIViewController {
         ref = Database.database().reference()
 
         
-tapsave.layer.cornerRadius = 5
+        tapsave.layer.cornerRadius = 5
         tapsave.clipsToBounds = true
 //        tapmonthly.layer.cornerRadius = 22.0
 //        tapmonthly.clipsToBounds = true
